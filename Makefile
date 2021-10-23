@@ -12,3 +12,6 @@ format: install
 
 format.check: install
 	yarn prettier --check .
+
+dev: install
+	node bin/index.js
