@@ -5,5 +5,10 @@
   "main": "index.js",
   "author": "Masaki Kobayashi <contact@mkobayashi.me>",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "eslint": "^8.1.0",
+    "eslint-config-prettier": "^8.3.0",
+    "prettier": "^2.4.1"
+  }
 }
