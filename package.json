@@ -1,0 +1,9 @@
+{
+  "name": "bookmarklets",
+  "version": "1.0.0",
+  "description": "My daily use bookmarklets",
+  "main": "index.js",
+  "author": "Masaki Kobayashi <contact@mkobayashi.me>",
+  "license": "MIT",
+  "private": true
+}
