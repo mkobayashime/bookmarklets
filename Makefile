@@ -13,8 +13,14 @@ format: install
 format.check: install
 	yarn prettier --check .
 
-dev: install
+create-dist-dir:
+	mkdir -p dist
+
+clear:
+	rm -rf dist
+
+dev: install create-dist-dir
 	node bin/index.js --watch
 
-build: install
+build: install create-dist-dir
 	node bin/index.js
