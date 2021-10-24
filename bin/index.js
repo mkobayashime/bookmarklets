@@ -41,11 +41,13 @@ const build = async () => {
   try {
     const files = await readdir(path.resolve("src"))
     for (const file of files) {
-      try {
-        const { prod } = await compile(path.resolve("src", file))
-        await writeFile(path.resolve("dist", file), prod)
-      } catch (err) {
-        console.error(err + "\n")
+      if (file.endsWith(".js")) {
+        try {
+          const { prod } = await compile(path.resolve("src", file))
+          await writeFile(path.resolve("dist", file), prod)
+        } catch (err) {
+          console.error(err + "\n")
+        }
       }
     }
   } catch (err) {
