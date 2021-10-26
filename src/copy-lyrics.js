@@ -41,13 +41,25 @@ const utaNet = () => {
   return area.innerText
 }
 
+const jLyric = () => {
+  const wrapper = document.getElementById("Lyric")
+  if (!wrapper) return
+  return wrapper.innerText
+}
+
 //
 ;(() => {
-  if (window.location.href.startsWith("https://www.google.com/search")) {
+  const url = window.location.href
+
+  if (url.startsWith("https://www.google.com/search")) {
     writeLyrics(googleSearch(), false)
   }
 
-  if (window.location.href.startsWith("https://www.uta-net.com/song/")) {
+  if (url.startsWith("https://www.uta-net.com/song/")) {
     writeLyrics(utaNet())
+  }
+
+  if (url.startsWith("https://j-lyric.net/")) {
+    writeLyrics(jLyric(), false)
   }
 })()
