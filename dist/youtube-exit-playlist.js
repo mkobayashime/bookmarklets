@@ -1,1 +1,1 @@
-javascript:(() => {const location=window.location.href,url=new URL(location);url.searchParams.delete("list"),url.searchParams.delete("index"),window.location.href=url.toString();})()
+javascript:(()=>{const%20location%3Dwindow.location.href%2Curl%3Dnew%20URL(location)%3Burl.searchParams.delete(%22list%22)%2Curl.searchParams.delete(%22index%22)%2Cwindow.location.href%3Durl.toString()%3B})()
