@@ -18,6 +18,7 @@ const writeLyrics = (lyrics, useClipboardAPI = true) => {
     document.body.appendChild(textarea)
     textarea.select()
     document.execCommand("copy")
+    textarea.remove()
   }
 }
 
