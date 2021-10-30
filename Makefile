@@ -20,7 +20,13 @@ clear:
 	rm -rf dist
 
 dev: install create-dist-dir
-	node bin/index.js --watch
+	node --loader ts-node/esm bin/index.ts --watch
 
 build: install create-dist-dir
-	node bin/index.js
+	node --loader ts-node/esm bin/index.ts
+
+typecheck: install
+	yarn tsc --noEmit
+
+typecheck.watch: install
+	yarn tsc --noEmit --watch
