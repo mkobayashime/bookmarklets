@@ -1,10 +1,10 @@
 import path from "path"
-import { watch, writeFile, readdir } from "fs/promises"
-import { minify } from "minify"
+import { watch, writeFile, readdir, readFile } from "fs/promises"
+import { minify } from "terser"
 import clipboard from "clipboardy"
 
-const compile = async (file: string) => {
-  const minified = encodeURIComponent(await minify(file))
+const compile = async (code: string) => {
+  const minified = encodeURIComponent((await (await minify(code)).code) ?? "")
   const prod = "javascript:(()=>{" + minified + "})()"
   const dev = prod.slice(1)
 
@@ -20,7 +20,9 @@ const dev = async () => {
     for await (const { filename } of watcher) {
       if (filename.endsWith(".js")) {
         try {
-          const { dev, prod } = await compile(path.resolve("src", filename))
+          const { dev, prod } = await compile(
+            (await readFile(path.resolve("src", filename))).toString()
+          )
 
           console.log(dev + "\n")
           clipboard.writeSync(dev)
@@ -32,7 +34,6 @@ const dev = async () => {
       }
     }
   } catch (err) {
-    if ((err as any).name === "AbortError") return
     console.error(err)
   }
 }
@@ -43,7 +44,9 @@ const build = async () => {
     for (const file of files) {
       if (file.endsWith(".js")) {
         try {
-          const { prod } = await compile(path.resolve("src", file))
+          const { prod } = await compile(
+            (await readFile(path.resolve("src", file))).toString()
+          )
           await writeFile(path.resolve("dist", file), prod)
         } catch (err) {
           console.error(err + "\n")
