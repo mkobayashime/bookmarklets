@@ -3,7 +3,7 @@ import { watch, writeFile, readdir } from "fs/promises"
 import { minify } from "minify"
 import clipboard from "clipboardy"
 
-const compile = async (file) => {
+const compile = async (file: string) => {
   const minified = encodeURIComponent(await minify(file))
   const prod = "javascript:(()=>{" + minified + "})()"
   const dev = prod.slice(1)
@@ -32,7 +32,7 @@ const dev = async () => {
       }
     }
   } catch (err) {
-    if (err.name === "AbortError") return
+    if ((err as any).name === "AbortError") return
     console.error(err)
   }
 }
