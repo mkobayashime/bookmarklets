@@ -6,6 +6,7 @@
   "author": "Masaki Kobayashi <contact@mkobayashi.me>",
   "license": "MIT",
   "private": true,
+  "type": "module",
   "devDependencies": {
     "@types/node": "^16.11.6",
     "clipboardy": "^3.0.0",
