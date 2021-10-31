@@ -24,6 +24,11 @@ dev: install create-dist-dir
 
 build: install create-dist-dir
 	node --loader ts-node/esm bin/index.ts
+	@make docgen
+
+docgen: install
+	node --loader ts-node/esm bin/docgen.ts
+	@make format
 
 typecheck: install
 	yarn tsc --noEmit
