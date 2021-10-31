@@ -1,3 +1,11 @@
+/**
+ * @title Copy lyrics
+ *
+ * @description
+ * Automatically Copy lyrics to clipboard
+ * in supported sites.
+ */
+
 const enableSelection = () => {
   const a = document.body
   const b = a.parentNode
