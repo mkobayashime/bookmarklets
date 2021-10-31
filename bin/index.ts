@@ -1,6 +1,7 @@
 import path from "path"
-import { watch, writeFile, readdir, readFile } from "fs/promises"
+import { watch, writeFile, readFile } from "fs/promises"
 import { minify } from "terser"
+import glob from "glob"
 import clipboard from "clipboardy"
 
 const compile = async (code: string) => {
@@ -40,17 +41,13 @@ const dev = async () => {
 
 const build = async () => {
   try {
-    const files = await readdir(path.resolve("src"))
-    for (const file of files) {
-      if (file.endsWith(".js")) {
-        try {
-          const { prod } = await compile(
-            (await readFile(path.resolve("src", file))).toString()
-          )
-          await writeFile(path.resolve("dist", file), prod)
-        } catch (err) {
-          console.error(err + "\n")
-        }
+    const files = await glob.sync(path.resolve("src", "*.js"))
+    for (const filepath of files) {
+      try {
+        const { prod } = await compile((await readFile(filepath)).toString())
+        await writeFile(path.resolve("dist", path.basename(filepath)), prod)
+      } catch (err) {
+        console.error(err + "\n")
       }
     }
   } catch (err) {
