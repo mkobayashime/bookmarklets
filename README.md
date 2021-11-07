@@ -4,6 +4,8 @@ Bookmarklets made by mkobayashime.
 
 All of them are written just for myself, so I bear no responsibility.
 
+Take a look at [Userscripts/styles](https://github.com/mkobayashime/userscripts/) for more utils.
+
 ## Scripts
 
 ### [Copy lyrics](dist/copy-lyrics.js)
