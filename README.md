@@ -19,3 +19,7 @@ Automatically Copy lyrics to clipboard in supported sites.
 ### [YouTube - Exit from playlist](dist/youtube-exit-playlist.js)
 
 Exit from playlist and move to the currently playing video.
+
+### [調整さん I'm free](dist/chouseisanImFree.js)
+
+調整さんの全日程候補で ○ を選択します
