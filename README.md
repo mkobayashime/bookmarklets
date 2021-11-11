@@ -16,6 +16,10 @@ Automatically Copy lyrics to clipboard in supported sites.
 
 ### [Google - Search in Japanese](dist/google-search-in-jp.js)
 
+### [Playback speed](dist/playbackRate.js)
+
+Change playback speed of video elements to inputted value
+
 ### [YouTube - Exit from playlist](dist/youtube-exit-playlist.js)
 
 Exit from playlist and move to the currently playing video.
