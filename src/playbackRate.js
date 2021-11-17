@@ -8,7 +8,7 @@
   if (videoElements.length === 0) return
 
   const newPlaybackRateString = window.prompt("Playback rate:", "2")
-  const newPlaybackRate = parseInt(newPlaybackRateString)
+  const newPlaybackRate = parseFloat(newPlaybackRateString)
   if (isNaN(newPlaybackRate)) return
 
   videoElements.forEach((e) => (e.playbackRate = newPlaybackRate))
