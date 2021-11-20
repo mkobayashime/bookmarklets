@@ -12,6 +12,10 @@ Take a look at [Userscripts/styles](https://github.com/mkobayashime/userscripts/
 
 Automatically Copy lyrics to clipboard in supported sites.
 
+### [Fixed page width](dist/fixedWidth.js)
+
+Limit max width of body to 1000px and center it
+
 ### [Google - Search in English](dist/google-search-in-en.js)
 
 ### [Google - Search in Japanese](dist/google-search-in-jp.js)

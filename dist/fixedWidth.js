@@ -1,0 +1,1 @@
+javascript:(()=>{document.body.style.maxWidth%3D%221000px%22%2Cdocument.body.style.margin%3D%220%20auto%22%3B})()
