@@ -8,7 +8,7 @@ Take a look at [Userscripts/styles](https://github.com/mkobayashime/userscripts/
 
 ## Scripts
 
-### [Copy lyrics](dist/copy-lyrics.js)
+### [Copy lyrics](dist/copyLyrics.js)
 
 Automatically Copy lyrics to clipboard in supported sites.
 
@@ -16,15 +16,15 @@ Automatically Copy lyrics to clipboard in supported sites.
 
 Limit max width of body to 1000px and center it
 
-### [Google - Search in English](dist/google-search-in-en.js)
+### [Google - Search in English](dist/googleSearchInEn.js)
 
-### [Google - Search in Japanese](dist/google-search-in-jp.js)
+### [Google - Search in Japanese](dist/googleSearchInJp.js)
 
 ### [Playback speed](dist/playbackRate.js)
 
 Change playback speed of video elements to inputted value
 
-### [YouTube - Exit from playlist](dist/youtube-exit-playlist.js)
+### [YouTube - Exit from playlist](dist/youtubeExitPlaylist.js)
 
 Exit from playlist and move to the currently playing video.
 
