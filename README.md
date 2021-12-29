@@ -8,6 +8,10 @@ Take a look at [Userscripts/styles](https://github.com/mkobayashime/userscripts/
 
 ## Scripts
 
+### [Copy document title](dist/copyDocumentTitle.js)
+
+Copy the value of `<title>` element to clipboard
+
 ### [Copy lyrics](dist/copyLyrics.js)
 
 Automatically Copy lyrics to clipboard in supported sites.
