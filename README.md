@@ -32,6 +32,10 @@ Change playback speed of video elements to inputted value
 
 Exit from playlist and move to the currently playing video.
 
+### [YouTube - Timestamp in URL](dist/youtubeTimestampInQuery.js)
+
+Put current timestamp to the `t` query parameter
+
 ### [調整さん I'm free](dist/chouseisanImFree.js)
 
 調整さんの全日程候補で ○ を選択します
