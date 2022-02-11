@@ -30,7 +30,7 @@ Change playback speed of video elements to inputted value
 
 ### [YouTube - Exit from playlist](dist/youtubeExitPlaylist.js)
 
-Exit from playlist and move to the currently playing video.
+Exit from playlist and play current video alone
 
 ### [YouTube - Timestamp in URL](dist/youtubeTimestampInQuery.js)
 

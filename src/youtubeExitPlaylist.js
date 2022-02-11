@@ -1,9 +1,6 @@
 /**
  * @title YouTube - Exit from playlist
- *
- * @description
- * Exit from playlist and move to the
- * currently playing video.
+ * @description Exit from playlist and play current video alone
  */
 
 const location = window.location.href
