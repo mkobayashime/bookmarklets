@@ -14,7 +14,7 @@ Copy the value of `<title>` element to clipboard
 
 ### [Copy lyrics](dist/copyLyrics.js)
 
-Automatically Copy lyrics to clipboard in supported sites.
+Automatically Copy lyrics to clipboard in supported sites
 
 ### [Exec bookmarklet in clipboard](dist/execBookmarkletInClipboard.js)
 
