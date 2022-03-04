@@ -3,7 +3,7 @@
  *
  * @description
  * Automatically Copy lyrics to clipboard
- * in supported sites.
+ * in supported sites
  */
 
 const enableSelection = () => {
