@@ -40,6 +40,10 @@ Exit from playlist and play current video alone
 
 Put current timestamp to the `t` query parameter
 
+### [YouTube Music to YouTube](dist/youtubeMusicToYoutube.js)
+
+Reopen currently playing music as video in normal YouTube
+
 ### [調整さん I'm free](dist/chouseisanImFree.js)
 
 調整さんの全日程候補で ○ を選択します
