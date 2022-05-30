@@ -28,6 +28,10 @@ Limit max width of body to 1000px and center it
 
 ### [Google - Search in Japanese](dist/googleSearchInJp.js)
 
+### [Mobile Suica - Sum checked payments](dist/mobileSuicaSum.js)
+
+モバイル Suica の利用履歴ページでチェックの入っている支払いの合計額を計算します
+
 ### [Playback speed](dist/playbackRate.js)
 
 Change playback speed of video elements to inputted value
