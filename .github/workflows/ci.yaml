@@ -22,8 +22,8 @@ jobs:
         run: make lint
       - name: Prettier
         run: make format.check
-  docs:
-    name: Up-to-date docs
+  up-to-date:
+    name: Up-to-date dist/docs
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
