@@ -15,7 +15,7 @@
     "eslint": "8.22.0",
     "eslint-config-prettier": "8.5.0",
     "fp-ts": "2.12.2",
-    "glob": "7.2.0",
+    "glob": "7.2.3",
     "prettier": "2.7.1",
     "terser": "5.15.0",
     "ts-node": "10.8.2",
