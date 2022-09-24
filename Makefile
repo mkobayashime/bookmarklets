@@ -1,16 +1,17 @@
-install:
-	yarn install
+node_modules: package.json yarn.lock
+	yarn
+	@touch node_modules
 
-lint: install
+lint: node_modules
 	yarn eslint .
 
-lint.fix: install
+lint.fix: node_modules
 	yarn eslint --fix .
 
-format: install
+format: node_modules
 	yarn prettier --write .
 
-format.check: install
+format.check: node_modules
 	yarn prettier --check .
 
 create-dist-dir:
@@ -19,19 +20,19 @@ create-dist-dir:
 clear:
 	rm -rf dist
 
-dev: install create-dist-dir
+dev: node_modules create-dist-dir
 	node --loader ts-node/esm bin/index.ts --watch
 
-build: install create-dist-dir
+build: node_modules create-dist-dir
 	node --loader ts-node/esm bin/index.ts
 	@make docgen
 
-docgen: install
+docgen: node_modules
 	node --loader ts-node/esm bin/docgen.ts
 	@make format
 
-typecheck: install
+typecheck: node_modules
 	yarn tsc --noEmit
 
-typecheck.watch: install
+typecheck.watch: node_modules
 	yarn tsc --noEmit --watch
