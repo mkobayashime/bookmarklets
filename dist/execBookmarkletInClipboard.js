@@ -1,1 +1,0 @@
-javascript:(()=>{(async()%3D%3E%7Blet%20t%3DdecodeURIComponent(await%20window.navigator.clipboard.readText())%3Bif(!t.startsWith(%22javascript%3A%22))return%20void%20window.alert(%22Invalid%20format%20bookmarklet.%22)%3Blet%20e%3Ddocument.createElement(%22script%22)%3Be.textContent%3Dt.replace(%22javascript%3A%22%2C%22%22)%2Cdocument.head.appendChild(e)%7D)()%3B})()
