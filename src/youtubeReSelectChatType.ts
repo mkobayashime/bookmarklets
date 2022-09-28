@@ -3,19 +3,19 @@ import { sleep } from "./utils/sleep"
 //
 ;(async () => {
   const chatIFrame = document.getElementById("chatframe")
-  if (!chatIFrame) return
+  if (!chatIFrame || !(chatIFrame instanceof HTMLIFrameElement)) return
 
-  const selectButton = chatIFrame.contentWindow.document.querySelector(
+  const selectButton = chatIFrame.contentWindow?.document.querySelector(
     '[aria-label="Live Chat mode selection"]'
   )
-  if (!selectButton) return
+  if (!selectButton || !(selectButton instanceof HTMLElement)) return
   selectButton.click()
 
   await sleep(300)
 
-  const firstOption = chatIFrame.contentWindow.document.querySelector(
+  const firstOption = chatIFrame.contentWindow?.document.querySelector(
     "tp-yt-paper-listbox a"
   )
-  if (!firstOption) return
+  if (!firstOption || !(firstOption instanceof HTMLElement)) return
   firstOption.click()
 })()

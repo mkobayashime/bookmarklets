@@ -9,10 +9,14 @@ const calc = () => {
   )
 
   return rows.reduce((sum, curRow) => {
-    const checkbox = curRow.querySelector("input[type='checkbox']")
+    const checkbox = curRow.querySelector<HTMLInputElement>(
+      "input[type='checkbox']"
+    )
     if (!checkbox || !checkbox.checked) return sum
 
     const amountElement = Array.from(curRow.children).pop()
+    if (!amountElement || !(amountElement instanceof HTMLElement)) return sum
+
     if (!amountElement?.innerText) return sum
 
     const amount = amountElement.innerText

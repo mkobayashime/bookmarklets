@@ -4,9 +4,13 @@
  */
 
 const video = document.querySelector("video")
-const timestamp = Math.floor(video.currentTime)
+if (video) {
+  const timestamp = Math.floor(video.currentTime)
 
-const location = window.location.href
-const url = new URL(location)
-url.searchParams.set("t", String(timestamp) + "s")
-window.history.pushState({}, "", url)
+  const location = window.location.href
+  const url = new URL(location)
+  url.searchParams.set("t", String(timestamp) + "s")
+  window.history.pushState({}, "", url)
+}
+
+export {}
