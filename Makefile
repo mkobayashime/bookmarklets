@@ -23,7 +23,7 @@ clear:
 dev: node_modules create-dist-dir
 	node --loader ts-node/esm bin/index.ts --watch
 
-build: node_modules create-dist-dir
+build: node_modules clear create-dist-dir
 	node --loader ts-node/esm bin/index.ts
 	@make docgen
 
