@@ -6,28 +6,12 @@
  * in supported sites
  */
 
+import { copyToClipboard } from "./utils/copyToClipboard"
+
 const enableSelection = () => {
   const a = document.body
   const b = a.parentNode
   b.removeChild(a), b.appendChild(a.cloneNode(!0))
-}
-
-const writeLyrics = (lyrics, useClipboardAPI = true) => {
-  if (!lyrics) return
-
-  console.log(lyrics)
-
-  if (useClipboardAPI) {
-    // tend to fail due to CSP
-    window.navigator.clipboard.writeText(lyrics)
-  } else {
-    const textarea = document.createElement("textarea")
-    textarea.textContent = lyrics
-    document.body.appendChild(textarea)
-    textarea.select()
-    document.execCommand("copy")
-    textarea.remove()
-  }
 }
 
 const googleSearch = () => {
@@ -61,14 +45,14 @@ const jLyric = () => {
   const url = window.location.href
 
   if (url.startsWith("https://www.google.com/search")) {
-    writeLyrics(googleSearch(), false)
+    copyToClipboard(googleSearch(), false)
   }
 
   if (url.startsWith("https://www.uta-net.com/song/")) {
-    writeLyrics(utaNet())
+    copyToClipboard(utaNet())
   }
 
   if (url.startsWith("https://j-lyric.net/")) {
-    writeLyrics(jLyric(), false)
+    copyToClipboard(jLyric(), false)
   }
 })()
