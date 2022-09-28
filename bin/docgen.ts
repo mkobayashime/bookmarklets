@@ -16,7 +16,7 @@ type FileProperties = {
 
 const getFiles = async (): Promise<string[]> => {
   try {
-    return await glob.sync(path.resolve("src", "*.js"))
+    return glob.sync(path.resolve("src", "*.js"))
   } catch (err) {
     console.error(err)
     return []
