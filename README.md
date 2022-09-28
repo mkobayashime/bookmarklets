@@ -16,6 +16,10 @@ Copy the value of `<title>` element to clipboard
 
 Automatically Copy lyrics to clipboard in supported sites
 
+### [Enable selection](dist/enableSelection.js)
+
+Enable text selection with mouse cursor in pages which prohibit doing that
+
 ### [Fixed page width](dist/fixedWidth.js)
 
 Limit max width of body to 1000px and center it
