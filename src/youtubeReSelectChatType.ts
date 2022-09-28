@@ -1,6 +1,6 @@
-import { sleep } from "./utils/sleep"
-
 // docgen-ignore
+
+import { sleep } from "./utils/sleep"
 
 //
 ;(async () => {
