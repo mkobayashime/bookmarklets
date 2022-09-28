@@ -1,5 +1,7 @@
 import { sleep } from "./utils/sleep"
 
+// docgen-ignore
+
 //
 ;(async () => {
   const chatIFrame = document.getElementById("chatframe")

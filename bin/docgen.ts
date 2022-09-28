@@ -23,7 +23,7 @@ const getFiles = async (): Promise<string[]> => {
   }
 }
 
-const readFileComments = async (filepath: string): Promise<string> => {
+export const readFileComments = async (filepath: string): Promise<string> => {
   try {
     const file = await readFile(filepath)
     const lines = file.toString()
@@ -34,7 +34,7 @@ const readFileComments = async (filepath: string): Promise<string> => {
   }
 }
 
-const parseComment = ({
+export const parseComment = ({
   comment,
   filename,
 }: {
