@@ -35,9 +35,7 @@ const compile = async (filename: string) => {
 const dev = async () => {
   try {
     chokidar
-      .watch([])
-      .add(path.resolve("src", "*.js"))
-      .add(path.resolve("src", "*.ts"))
+      .watch(path.resolve("src", "*.ts"))
       .on("change", async (filename) => {
         try {
           const { dev, prod } = await compile(filename)
