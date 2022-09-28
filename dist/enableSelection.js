@@ -1,0 +1,1 @@
+javascript:(()=>{var%20n%3D()%3D%3E%7Blet%20e%3Ddocument.body%2Cd%3De.parentNode%3Bd%26%26(d.removeChild(e)%2Cd.appendChild(e.cloneNode(!0)))%7D%3Bn()%3B})()
