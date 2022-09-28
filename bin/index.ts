@@ -1,12 +1,28 @@
 import path from "path"
-import { watch, writeFile, readFile } from "fs/promises"
+import { watch, writeFile } from "fs/promises"
+import * as esbuild from "esbuild"
 import { minify } from "terser"
 import glob from "glob"
 import clipboard from "clipboardy"
 
-const compile = async (code: string) => {
-  const minified = encodeURIComponent((await (await minify(code)).code) ?? "")
-  const prod = "javascript:(()=>{" + minified + "})()"
+const compile = async (filename: string) => {
+  const esbuildOutput = await esbuild.build({
+    entryPoints: [path.resolve("src", filename)],
+    bundle: true,
+    minify: true,
+    format: "esm",
+    write: false,
+  })
+
+  if (!esbuildOutput.outputFiles[0]) {
+    throw new Error("esbuild outputFiles is empty")
+  }
+  const code = esbuildOutput.outputFiles[0].text
+
+  const prod =
+    "javascript:(()=>{" +
+    encodeURIComponent((await minify(code)).code ?? "") +
+    "})()"
   const dev = prod.slice(1)
 
   return {
@@ -21,9 +37,7 @@ const dev = async () => {
     for await (const { filename } of watcher) {
       if (filename.endsWith(".js")) {
         try {
-          const { dev, prod } = await compile(
-            (await readFile(path.resolve("src", filename))).toString()
-          )
+          const { dev, prod } = await compile(filename)
 
           console.log(dev + "\n")
           clipboard.writeSync(dev)
@@ -44,7 +58,7 @@ const build = async () => {
     const files = await glob.sync(path.resolve("src", "*.js"))
     for (const filepath of files) {
       try {
-        const { prod } = await compile((await readFile(filepath)).toString())
+        const { prod } = await compile(filepath)
         await writeFile(path.resolve("dist", path.basename(filepath)), prod)
       } catch (err) {
         console.error(err + "\n")
