@@ -24,6 +24,23 @@ jobs:
         run: make format.check
       - name: Typecheck
         run: make typecheck
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+      - uses: actions/cache@v3
+        with:
+          path: "**/node_modules"
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+      - name: Install dependencies
+        run: yarn --frozen-lockfile
+      - name: Test
+        run: make test
   up-to-date:
     name: Up-to-date dist/docs
     runs-on: ubuntu-latest

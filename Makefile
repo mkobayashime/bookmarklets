@@ -14,6 +14,12 @@ format: node_modules
 format.check: node_modules
 	yarn prettier --check .
 
+test: node_modules
+	yarn run ava
+
+test.watch: node_modules
+	yarn run ava --watch
+
 create-dist-dir:
 	mkdir -p dist
 
