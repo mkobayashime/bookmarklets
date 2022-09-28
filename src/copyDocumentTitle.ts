@@ -6,5 +6,6 @@
 import { copyToClipboard } from "./utils/copyToClipboard"
 
 const titleElement = document.querySelector("title")
+const title = titleElement?.innerText
 
-copyToClipboard(titleElement.innerText, false)
+if (title) copyToClipboard(title, false)

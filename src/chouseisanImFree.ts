@@ -9,10 +9,12 @@
     if (formOpenButton) formOpenButton.click()
 
     const choiceInputs = Array.from(
-      document.querySelectorAll("#choice td input[type='hidden']")
+      document.querySelectorAll<HTMLInputElement>(
+        "#choice td input[type='hidden']"
+      )
     )
     if (choiceInputs.length === 0) return
-    choiceInputs.forEach((input) => (input.value = 1))
+    choiceInputs.forEach((input) => (input.value = "1"))
 
     const choice1Buttons = Array.from(document.getElementsByClassName("oax-0"))
     const choice3Buttons = Array.from(document.getElementsByClassName("oax-2"))

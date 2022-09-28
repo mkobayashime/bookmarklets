@@ -19,7 +19,13 @@ const googleSearch = () => {
   const paragraphs = Array.from(paragraphsWrapper.children)
   if (!paragraphs || paragraphs.length === 0) return
 
-  return paragraphs.map((element) => element.innerText).join("\n\n")
+  return paragraphs
+    .map((element) => {
+      if (!(element instanceof HTMLElement)) return null
+      return element.innerText
+    })
+    .filter((str) => str)
+    .join("\n\n")
 }
 
 const utaNet = () => {
@@ -40,14 +46,23 @@ const jLyric = () => {
   const url = window.location.href
 
   if (url.startsWith("https://www.google.com/search")) {
-    copyToClipboard(googleSearch(), false)
+    const lyrics = googleSearch()
+    if (lyrics) {
+      copyToClipboard(lyrics, false)
+    }
   }
 
   if (url.startsWith("https://www.uta-net.com/song/")) {
-    copyToClipboard(utaNet())
+    const lyrics = utaNet()
+    if (lyrics) {
+      copyToClipboard(lyrics)
+    }
   }
 
   if (url.startsWith("https://j-lyric.net/")) {
-    copyToClipboard(jLyric(), false)
+    const lyrics = jLyric()
+    if (lyrics) {
+      copyToClipboard(lyrics, false)
+    }
   }
 })()
