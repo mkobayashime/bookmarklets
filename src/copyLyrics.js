@@ -7,12 +7,7 @@
  */
 
 import { copyToClipboard } from "./utils/copyToClipboard"
-
-const enableSelection = () => {
-  const a = document.body
-  const b = a.parentNode
-  b.removeChild(a), b.appendChild(a.cloneNode(!0))
-}
+import { enableSelection } from "./utils/enableSelection"
 
 const googleSearch = () => {
   const wrapper = document.querySelector("div[data-lyricid]")
