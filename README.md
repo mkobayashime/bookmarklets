@@ -16,10 +16,6 @@ Copy the value of `<title>` element to clipboard
 
 Automatically Copy lyrics to clipboard in supported sites
 
-### [Exec bookmarklet in clipboard](dist/execBookmarkletInClipboard.js)
-
-Useful for debugging bookmarklets
-
 ### [Fixed page width](dist/fixedWidth.js)
 
 Limit max width of body to 1000px and center it
