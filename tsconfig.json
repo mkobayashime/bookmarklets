@@ -2,7 +2,7 @@
   "include": ["**/*.ts"],
   "compilerOptions": {
     "target": "es2020",
-    "module": "es2020",
+    "module": "ESNext",
     "moduleResolution": "node",
     "noEmit": true,
     "esModuleInterop": true,
