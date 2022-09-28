@@ -72,9 +72,7 @@ ${description ?? ""}
 }
 
 const updateReadme = async (scriptsMarkdown: string): Promise<void> => {
-  const readme = await (
-    await readFile(path.resolve(".", "README.md"))
-  ).toString()
+  const readme = (await readFile(path.resolve(".", "README.md"))).toString()
   if (!readme) return
 
   const readmeCommonPart = readme.slice(
