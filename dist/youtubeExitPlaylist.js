@@ -1,1 +1,1 @@
-javascript:(()=>{const%20location%3Dwindow.location.href%2Curl%3Dnew%20URL(location)%3Burl.searchParams.delete(%22list%22)%2Curl.searchParams.delete(%22index%22)%2Cwindow.location.href%3Durl.toString()%3B})()
+javascript:(()=>{var%20o%3Dwindow.location.href%2Ce%3Dnew%20URL(o)%3Be.searchParams.delete(%22list%22)%2Ce.searchParams.delete(%22index%22)%2Cwindow.location.href%3De.toString()%3B})()

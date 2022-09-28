@@ -1,1 +1,1 @@
-javascript:(()=>{const%20video%3Ddocument.querySelector(%22video%22)%2Ctimestamp%3DMath.floor(video.currentTime)%2Clocation%3Dwindow.location.href%2Curl%3Dnew%20URL(location)%3Burl.searchParams.set(%22t%22%2CString(timestamp)%2B%22s%22)%2Cwindow.history.pushState(%7B%7D%2C%22%22%2Curl)%3B})()
+javascript:(()=>{var%20o%3Ddocument.querySelector(%22video%22)%2Ce%3DMath.floor(o.currentTime)%2Cn%3Dwindow.location.href%2Ct%3Dnew%20URL(n)%3Bt.searchParams.set(%22t%22%2CString(e)%2B%22s%22)%2Cwindow.history.pushState(%7B%7D%2C%22%22%2Ct)%3B})()
