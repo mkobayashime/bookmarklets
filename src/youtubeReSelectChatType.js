@@ -1,4 +1,4 @@
-const sleep = (n) => new Promise((resolve) => window.setTimeout(resolve, n))
+import { sleep } from "./utils/sleep"
 
 //
 ;(async () => {
