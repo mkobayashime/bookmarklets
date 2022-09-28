@@ -35,7 +35,9 @@ const compile = async (filename: string) => {
 const dev = async () => {
   try {
     chokidar
-      .watch(path.resolve("src", "*.js"))
+      .watch([])
+      .add(path.resolve("src", "*.js"))
+      .add(path.resolve("src", "*.ts"))
       .on("change", async (filename) => {
         try {
           const { dev, prod } = await compile(filename)
@@ -43,7 +45,13 @@ const dev = async () => {
           console.log(dev + "\n")
           clipboard.writeSync(dev)
 
-          await writeFile(path.resolve("dist", path.basename(filename)), prod)
+          await writeFile(
+            path.resolve(
+              "dist",
+              path.basename(filename).replace(/.ts$/, ".js")
+            ),
+            prod
+          )
         } catch (err) {
           console.log(err + "\n")
         }
@@ -59,7 +67,10 @@ const build = async () => {
     for (const filepath of files) {
       try {
         const { prod } = await compile(path.resolve("src", filepath))
-        await writeFile(path.resolve("dist", path.basename(filepath)), prod)
+        await writeFile(
+          path.resolve("dist", path.basename(filepath).replace(/.ts$/, ".js")),
+          prod
+        )
       } catch (err) {
         console.error(err + "\n")
       }
