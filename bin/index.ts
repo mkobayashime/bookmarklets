@@ -67,7 +67,7 @@ const dev = async () => {
 
 const build = async () => {
   try {
-    const files = glob.sync(path.resolve("src", "*.js"))
+    const files = glob.sync(path.resolve("src", "*.ts"))
     for (const filepath of files) {
       try {
         const { prod } = await compile(path.resolve("src", filepath))
