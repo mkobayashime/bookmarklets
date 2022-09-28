@@ -3,6 +3,7 @@ import { writeFile } from "fs/promises"
 import * as esbuild from "esbuild"
 import { minify } from "terser"
 import chokidar from "chokidar"
+import chalk from "chalk"
 import glob from "glob"
 import clipboard from "clipboardy"
 
@@ -34,13 +35,14 @@ const compile = async (filename: string) => {
 
 const dev = async () => {
   try {
-    chokidar
+    const watcher = chokidar
       .watch(path.resolve("src", "*.ts"))
       .on("change", async (filename) => {
         try {
           const { dev, prod } = await compile(filename)
+          console.log(chalk.green(`\nCompiled ${path.basename(filename)}`))
 
-          console.log(dev + "\n")
+          console.log(dev)
           clipboard.writeSync(dev)
 
           await writeFile(
@@ -54,6 +56,10 @@ const dev = async () => {
           console.log(err + "\n")
         }
       })
+
+    watcher.on("ready", () =>
+      console.log(chalk.green("\nDev mode started: watching for file changes"))
+    )
   } catch (err) {
     console.error(err)
   }
