@@ -8,46 +8,46 @@ Take a look at [Userscripts/styles](https://github.com/mkobayashime/userscripts/
 
 ## Scripts
 
-### [Copy document title](dist/copyDocumentTitle.js)
+### [Copy document title](https://raw.githubusercontent.com/mkobayashime/bookmarklets/main/dist/copyDocumentTitle.js)
 
 Copy the value of `<title>` element to clipboard
 
-### [Copy lyrics](dist/copyLyrics.js)
+### [Copy lyrics](https://raw.githubusercontent.com/mkobayashime/bookmarklets/main/dist/copyLyrics.js)
 
 Automatically Copy lyrics to clipboard in supported sites
 
-### [Enable selection](dist/enableSelection.js)
+### [Enable selection](https://raw.githubusercontent.com/mkobayashime/bookmarklets/main/dist/enableSelection.js)
 
 Enable text selection with mouse cursor in pages which prohibit doing that
 
-### [Fixed page width](dist/fixedWidth.js)
+### [Fixed page width](https://raw.githubusercontent.com/mkobayashime/bookmarklets/main/dist/fixedWidth.js)
 
 Limit max width of body to 1000px and center it
 
-### [Google - Search in English](dist/googleSearchInEn.js)
+### [Google - Search in English](https://raw.githubusercontent.com/mkobayashime/bookmarklets/main/dist/googleSearchInEn.js)
 
-### [Google - Search in Japanese](dist/googleSearchInJp.js)
+### [Google - Search in Japanese](https://raw.githubusercontent.com/mkobayashime/bookmarklets/main/dist/googleSearchInJp.js)
 
-### [Mobile Suica - Sum checked payments](dist/mobileSuicaSum.js)
+### [Mobile Suica - Sum checked payments](https://raw.githubusercontent.com/mkobayashime/bookmarklets/main/dist/mobileSuicaSum.js)
 
 モバイル Suica の利用履歴ページでチェックの入っている支払いの合計額を計算します
 
-### [Playback speed](dist/playbackRate.js)
+### [Playback speed](https://raw.githubusercontent.com/mkobayashime/bookmarklets/main/dist/playbackRate.js)
 
 Change playback speed of video elements to inputted value
 
-### [YouTube - Exit from playlist](dist/youtubeExitPlaylist.js)
+### [YouTube - Exit from playlist](https://raw.githubusercontent.com/mkobayashime/bookmarklets/main/dist/youtubeExitPlaylist.js)
 
 Exit from playlist and play current video alone
 
-### [YouTube - Timestamp in URL](dist/youtubeTimestampInQuery.js)
+### [YouTube - Timestamp in URL](https://raw.githubusercontent.com/mkobayashime/bookmarklets/main/dist/youtubeTimestampInQuery.js)
 
 Put current timestamp to the `t` query parameter
 
-### [YouTube Music to YouTube](dist/youtubeMusicToYoutube.js)
+### [YouTube Music to YouTube](https://raw.githubusercontent.com/mkobayashime/bookmarklets/main/dist/youtubeMusicToYoutube.js)
 
 Reopen currently playing music as video in normal YouTube
 
-### [調整さん I'm free](dist/chouseisanImFree.js)
+### [調整さん I'm free](https://raw.githubusercontent.com/mkobayashime/bookmarklets/main/dist/chouseisanImFree.js)
 
 調整さんの全日程候補で ○ を選択します

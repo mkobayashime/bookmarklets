@@ -65,7 +65,10 @@ const generateMdFileEntry = ({
   description,
 }: FileProperties): string => {
   return `
-### [${title}](dist/${filename.replace(/.ts$/, ".js")})
+### [${title}](https://raw.githubusercontent.com/mkobayashime/bookmarklets/main/dist/${filename.replace(
+    /.ts$/,
+    ".js"
+  )})
 
 ${description ?? ""}
   `.trim()
