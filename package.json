@@ -24,7 +24,7 @@
     "fp-ts": "2.12.3",
     "glob": "8.0.3",
     "prettier": "2.7.1",
-    "terser": "5.15.0",
+    "terser": "5.15.1",
     "ts-node": "10.9.1",
     "typescript": "4.8.3"
   }
