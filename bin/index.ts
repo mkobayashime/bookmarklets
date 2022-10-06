@@ -1,11 +1,11 @@
-import path from "path"
-import { writeFile } from "fs/promises"
-import * as esbuild from "esbuild"
-import { minify } from "terser"
-import chokidar from "chokidar"
 import chalk from "chalk"
-import glob from "glob"
+import chokidar from "chokidar"
 import clipboard from "clipboardy"
+import * as esbuild from "esbuild"
+import { writeFile } from "fs/promises"
+import glob from "glob"
+import path from "path"
+import { minify } from "terser"
 
 const compile = async (filename: string) => {
   const esbuildOutput = await esbuild.build({
@@ -33,34 +33,39 @@ const compile = async (filename: string) => {
   }
 }
 
-const dev = async () => {
+const dev = () => {
   let prevOutput = ""
 
   try {
     const watcher = chokidar
       .watch(path.resolve("src", "*.ts"))
-      .on("change", async (filename) => {
-        try {
-          const { dev, prod } = await compile(filename)
+      .on("change", (filename) => {
+        ;(async () => {
+          try {
+            const { dev, prod } = await compile(filename)
 
-          if (prevOutput === prod) return
-          prevOutput = prod
+            if (prevOutput === prod) return
+            prevOutput = prod
 
-          console.log(chalk.green(`\nCompiled ${path.basename(filename)}`))
+            console.log(chalk.green(`\nCompiled ${path.basename(filename)}`))
 
-          console.log(dev)
-          clipboard.writeSync(dev)
+            console.log(dev)
+            clipboard.writeSync(dev)
 
-          await writeFile(
-            path.resolve(
-              "dist",
-              path.basename(filename).replace(/.ts$/, ".js")
-            ),
-            prod
-          )
-        } catch (err) {
-          console.log(err + "\n")
-        }
+            await writeFile(
+              path.resolve(
+                "dist",
+                path.basename(filename).replace(/.ts$/, ".js")
+              ),
+              prod
+            )
+          } catch (err) {
+            console.error(err)
+            console.log("")
+          }
+        })().catch((err) => {
+          console.error(err)
+        })
       })
 
     watcher.on("ready", () =>
@@ -82,7 +87,8 @@ const build = async () => {
           prod
         )
       } catch (err) {
-        console.error(err + "\n")
+        console.error(err)
+        console.log("")
       }
     }
   } catch (err) {
@@ -93,8 +99,10 @@ const build = async () => {
 //
 ;(async () => {
   if (process.argv.includes("--watch")) {
-    await dev()
+    dev()
   } else {
     await build()
   }
-})()
+})().catch((err) => {
+  console.error(err)
+})

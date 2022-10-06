@@ -1,12 +1,12 @@
-import path from "path"
-import { readFile, writeFile } from "fs/promises"
+import { parse, tokenizers } from "comment-parser"
+import * as A from "fp-ts/lib/Array.js"
 import { pipe } from "fp-ts/lib/function.js"
 import * as O from "fp-ts/lib/Option.js"
-import * as A from "fp-ts/lib/Array.js"
 import * as Ord from "fp-ts/lib/Ord.js"
 import * as string from "fp-ts/lib/string.js"
+import { readFile, writeFile } from "fs/promises"
 import glob from "glob"
-import { parse, tokenizers } from "comment-parser"
+import path from "path"
 
 type FileProperties = {
   filename: string
@@ -14,7 +14,7 @@ type FileProperties = {
   description?: string
 }
 
-const getFiles = async (): Promise<string[]> => {
+const getFiles = (): string[] => {
   try {
     return glob.sync(path.resolve("src", "*.ts"))
   } catch (err) {
@@ -89,7 +89,7 @@ const updateReadme = async (scriptsMarkdown: string): Promise<void> => {
 
 //
 ;(async () => {
-  const files = await getFiles()
+  const files = getFiles()
 
   const filesProperties = pipe(
     await Promise.all(
@@ -108,5 +108,7 @@ const updateReadme = async (scriptsMarkdown: string): Promise<void> => {
     .map((fileProperties) => generateMdFileEntry(fileProperties))
     .join("\n\n")
 
-  updateReadme(scriptsMarkdown)
-})()
+  await updateReadme(scriptsMarkdown)
+})().catch((err) => {
+  throw err
+})

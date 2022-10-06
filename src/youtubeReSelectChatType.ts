@@ -20,4 +20,4 @@ import { sleep } from "./utils/sleep"
   )
   if (!firstOption || !(firstOption instanceof HTMLElement)) return
   firstOption.click()
-})()
+})().catch((err) => console.error(err))

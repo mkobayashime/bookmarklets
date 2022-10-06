@@ -1,8 +1,9 @@
 import test from "ava"
-import path, { basename } from "node:path"
-import fs from "node:fs/promises"
-import glob from "glob"
 import * as O from "fp-ts/lib/Option.js"
+import glob from "glob"
+import fs from "node:fs/promises"
+import path, { basename } from "node:path"
+
 import { readFileComments, parseComment } from "../bin/docgen.js"
 
 const bookmarklets = glob.sync(path.resolve("src", "*.ts"))
