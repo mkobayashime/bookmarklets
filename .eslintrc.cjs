@@ -1,9 +1,15 @@
 /** @type {import('@typescript-eslint/experimental-utils').TSESLint.Linter.Config} */
 const config = {
   env: { es2021: true, node: true, browser: true },
-  extends: ["eslint:recommended", "prettier"],
-  parserOptions: { ecmaVersion: 12, sourceType: "module" },
+  extends: ["@mkobayashime"],
+  parser: "@typescript-eslint/parser",
+  parserOptions: {
+    project: "./tsconfig.json",
+    ecmaVersion: 12,
+    sourceType: "module",
+  },
   rules: {},
+  plugins: ["@typescript-eslint", "import"],
   overrides: [
     {
       files: ["*.ts"],
