@@ -106,7 +106,7 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
-"@mkobayashime/eslint-config@^0.1.0":
+"@mkobayashime/eslint-config@0.1.0":
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/@mkobayashime/eslint-config/-/eslint-config-0.1.0.tgz#831d446001af389ecd3179831bb3d41a98b874e5"
   integrity sha512-Hg0tAVPAjn8ibDBwcWcbnRC3h9ICQEmdUgVqs2oHG/1gFXbiikrT3cNHgywc63ZnSoOjE6IEhVivtrj9nCqMfg==
@@ -1125,7 +1125,7 @@ eslint-module-utils@^2.7.3:
   dependencies:
     debug "^3.2.7"
 
-eslint-plugin-import@^2.26.0:
+eslint-plugin-import@2.26.0:
   version "2.26.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-import/-/eslint-plugin-import-2.26.0.tgz#f812dc47be4f2b72b478a021605a59fc6fe8b88b"
   integrity sha512-hYfi3FXaM8WPLf4S1cikh/r4IxnO6zrhZbEGz2b660EJRbuxgpDS5gkCuYgGWg2xxh2rBuIr4Pvhve/7c31koA==
