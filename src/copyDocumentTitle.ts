@@ -8,4 +8,6 @@ import { copyToClipboard } from "./utils/copyToClipboard"
 const titleElement = document.querySelector("title")
 const title = titleElement?.innerText
 
-if (title) copyToClipboard(title, false)
+;(async () => {
+  if (title) await copyToClipboard(title, false)
+})().catch((err) => console.error(err))

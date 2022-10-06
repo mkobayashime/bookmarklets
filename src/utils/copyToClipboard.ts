@@ -1,11 +1,11 @@
-export const copyToClipboard = (text: string, useClipboardAPI = true) => {
+export const copyToClipboard = async (text: string, useClipboardAPI = true) => {
   if (!text) return
 
   console.log(text)
 
   if (useClipboardAPI) {
     // tend to fail due to CSP
-    window.navigator.clipboard.writeText(text)
+    await window.navigator.clipboard.writeText(text)
   } else {
     const textarea = document.createElement("textarea")
     textarea.textContent = text

@@ -42,27 +42,27 @@ const jLyric = () => {
 }
 
 //
-;(() => {
+;(async () => {
   const url = window.location.href
 
   if (url.startsWith("https://www.google.com/search")) {
     const lyrics = googleSearch()
     if (lyrics) {
-      copyToClipboard(lyrics, false)
+      await copyToClipboard(lyrics, false)
     }
   }
 
   if (url.startsWith("https://www.uta-net.com/song/")) {
     const lyrics = utaNet()
     if (lyrics) {
-      copyToClipboard(lyrics)
+      await copyToClipboard(lyrics)
     }
   }
 
   if (url.startsWith("https://j-lyric.net/")) {
     const lyrics = jLyric()
     if (lyrics) {
-      copyToClipboard(lyrics, false)
+      await copyToClipboard(lyrics, false)
     }
   }
-})()
+})().catch((err) => console.error(err))
