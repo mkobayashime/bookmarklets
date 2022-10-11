@@ -44,7 +44,14 @@ const dev = () => {
           try {
             const { dev, prod } = await compile(filename)
 
-            if (prevOutput === prod) return
+            if (prevOutput === prod) {
+              console.log(
+                chalk.blue(
+                  `\n${path.basename(filename)} is unchanged. Skipping...`
+                )
+              )
+              return
+            }
             prevOutput = prod
 
             console.log(chalk.green(`\nCompiled ${path.basename(filename)}`))
