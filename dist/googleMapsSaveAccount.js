@@ -1,0 +1,1 @@
+javascript:(()=>{var%20t%3D%22__google_maps_auth_user%22%3B(()%3D%3E%7Bif(!window.location.href.startsWith(%22https%3A%2F%2Fwww.google.com%2Fmaps%2F%22))return%3Blet%20a%3Dnew%20URLSearchParams(window.location.search).get(%22authuser%22)%3Ba%26%26window.localStorage.setItem(t%2Ca)%7D)()%3B})()
