@@ -1,0 +1,1 @@
+javascript:(()=>{var%20t%3D%22__google_maps_auth_user%22%3B(()%3D%3E%7Bif(!window.location.href.startsWith(%22https%3A%2F%2Fwww.google.com%2Fmaps%2F%22))return%3Blet%20o%3Dwindow.localStorage.getItem(t)%3Bo%26%26(window.location.href%3D%60https%3A%2F%2Fwww.google.com%2Fmaps%3Fauthuser%3D%24%7Bo%7D%26hl%3Dja%60)%7D)()%3B})()
