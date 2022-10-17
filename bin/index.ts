@@ -56,7 +56,7 @@ const dev = () => {
 
             console.log(chalk.green(`\nCompiled ${path.basename(filename)}`))
 
-            console.log(dev)
+            console.log(prod)
             clipboard.writeSync(dev)
 
             await writeFile(
