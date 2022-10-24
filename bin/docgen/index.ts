@@ -6,9 +6,9 @@ import { readFile, writeFile } from "fs/promises"
 import glob from "glob"
 import path from "path"
 
-import { FileProperties } from "../types"
+import { FileProperties } from "../../types"
 
-import { parseComments } from "./docgen/parseComments"
+import { parseComments } from "./parseComments.js"
 
 const getFiles = (): string[] => {
   try {

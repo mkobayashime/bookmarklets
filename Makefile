@@ -45,7 +45,7 @@ build: node_modules clear create-dist-dir
 
 .PHONY: docgen
 docgen: node_modules
-	node --loader ts-node/esm bin/docgen.ts
+	node --loader ts-node/esm bin/docgen/index.ts
 	@make format
 
 .PHONY: typecheck
