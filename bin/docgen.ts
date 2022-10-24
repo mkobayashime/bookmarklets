@@ -19,40 +19,37 @@ const getFiles = (): string[] => {
   }
 }
 
-export const readFileComments = async (filepath: string): Promise<string> => {
+export const parseComments = async (
+  filepath: string
+): Promise<O.Option<FileProperties>> => {
   try {
     const file = await readFile(filepath)
     const lines = file.toString()
-    return lines.slice(lines.indexOf("/**"), lines.indexOf("*/") + 2)
+    const commentString = lines.slice(
+      lines.indexOf("/**"),
+      lines.indexOf("*/") + 2
+    )
+
+    const blocks = parse(commentString, {
+      tokenizers: [tokenizers.tag(), tokenizers.description("compact")],
+    })
+    if (blocks.length === 0) return O.none
+
+    const specs = blocks[0].tags
+    const titleSpec = specs.find(({ tag }) => tag === "title")
+    const descriptionSpec = specs.find(({ tag }) => tag === "description")
+
+    if (!titleSpec) return O.none
+
+    return O.some({
+      filename: path.basename(filepath),
+      title: titleSpec.description,
+      description: descriptionSpec?.description,
+    })
   } catch (err) {
     console.error(err)
-    return ""
+    return O.none
   }
-}
-
-export const parseComment = ({
-  comment,
-  filename,
-}: {
-  comment: string
-  filename: string
-}): O.Option<FileProperties> => {
-  const blocks = parse(comment, {
-    tokenizers: [tokenizers.tag(), tokenizers.description("compact")],
-  })
-  if (blocks.length === 0) return O.none
-
-  const specs = blocks[0].tags
-  const titleSpec = specs.find(({ tag }) => tag === "title")
-  const descriptionSpec = specs.find(({ tag }) => tag === "description")
-
-  if (!titleSpec) return O.none
-
-  return O.some({
-    filename,
-    title: titleSpec.description,
-    description: descriptionSpec?.description,
-  })
 }
 
 const generateMdFileEntry = ({
@@ -88,12 +85,7 @@ const updateReadme = async (scriptsMarkdown: string): Promise<void> => {
   const files = getFiles()
 
   const filesProperties = pipe(
-    await Promise.all(
-      files.map(async (file) => {
-        const comment = await readFileComments(file)
-        return parseComment({ comment, filename: path.basename(file) })
-      })
-    ),
+    await Promise.all(files.map(async (file) => await parseComments(file))),
     A.compact,
     A.sort<FileProperties>(
       Ord.fromCompare((a, b) => string.Ord.compare(a.title, b.title))
