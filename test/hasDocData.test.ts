@@ -4,16 +4,13 @@ import glob from "glob"
 import fs from "node:fs/promises"
 import path, { basename } from "node:path"
 
-import { readFileComments, parseComment } from "../bin/docgen.js"
+import { parseComments } from "../bin/docgen/parseComments.js"
 
 const bookmarklets = glob.sync(path.resolve("src", "*.ts"))
 
 for await (const filepath of bookmarklets) {
   test(`${basename(filepath)} has doc data or docgen-ignored`, async (t) => {
-    const comments = parseComment({
-      comment: await readFileComments(filepath),
-      filename: filepath,
-    })
+    const comments = await parseComments(filepath)
 
     if (O.isSome(comments)) {
       return t.pass()
