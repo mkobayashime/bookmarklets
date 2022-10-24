@@ -8,11 +8,7 @@ import { readFile, writeFile } from "fs/promises"
 import glob from "glob"
 import path from "path"
 
-type FileProperties = {
-  filename: string
-  title: string
-  description?: string
-}
+import { FileProperties } from "../types"
 
 const getFiles = (): string[] => {
   try {
