@@ -10,15 +10,21 @@ import { copyToClipboard } from "./utils/copyToClipboard"
   if (!window.location.href.startsWith("https://www.amazon.co.jp")) return
 
   const itemIDMatch = new RegExp(
-    "^https://www.amazon.co.jp/[^/]+/dp/(\\d+)/"
+    "^https://www.amazon.co.jp/[^/]+/dp/([^/]+)/"
   ).exec(window.location.href)
-  if (!itemIDMatch || typeof itemIDMatch[1] !== "string") return
+  if (!itemIDMatch || typeof itemIDMatch[1] !== "string") {
+    console.error("Failed to retrieve ID of the item from URL")
+    return
+  }
 
   const itemID = itemIDMatch[1]
   const normalizedURL = `https://www.amazon.co.jp/dp/${itemID}/`
 
   const productTitleElement = document.getElementById("productTitle")
-  if (!productTitleElement || productTitleElement.innerText === "") return
+  if (!productTitleElement || productTitleElement.innerText === "") {
+    console.error("Failed to get name of the item")
+    return
+  }
 
   const sharableText = `${productTitleElement.innerText}\n${normalizedURL}`
 
