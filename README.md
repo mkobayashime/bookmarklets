@@ -8,6 +8,10 @@ Take a look at [Userscripts/styles](https://github.com/mkobayashime/userscripts/
 
 ## Scripts
 
+### [Amazon.co.jp - Copy sharable description](https://raw.githubusercontent.com/mkobayashime/bookmarklets/main/dist/amazonShare.js)
+
+Copy name and normalized link of the current item to clipboard
+
 ### [Copy document title](https://raw.githubusercontent.com/mkobayashime/bookmarklets/main/dist/copyDocumentTitle.js)
 
 Copy the value of `<title>` element to clipboard
