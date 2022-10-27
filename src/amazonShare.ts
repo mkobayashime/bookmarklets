@@ -28,7 +28,6 @@ import { copyToClipboard } from "./utils/copyToClipboard"
 
   const sharableText = `${productTitleElement.innerText}\n${normalizedURL}`
 
-  console.log(sharableText)
   await copyToClipboard(sharableText, false)
 })().catch((err) => {
   console.error(err)
