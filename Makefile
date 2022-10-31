@@ -1,3 +1,5 @@
+cli = yarn run bookmarklets-cli 'src/*.ts'
+
 node_modules: package.json yarn.lock
 	yarn
 	@touch node_modules
@@ -26,21 +28,17 @@ test: node_modules
 test.watch: node_modules
 	yarn run ava --watch
 
-.PHONY: create-dist-dir
-create-dist-dir:
-	mkdir -p dist
-
 .PHONY: clear
 clear:
 	rm -rf dist
 
 .PHONY: dev
-dev: node_modules create-dist-dir
-	node --loader ts-node/esm bin/index.ts --watch
+dev: node_modules
+	$(cli) -w
 
 .PHONY: build
-build: node_modules clear create-dist-dir
-	node --loader ts-node/esm bin/index.ts
+build: node_modules clear
+	$(cli)
 	@make docgen
 
 .PHONY: docgen
