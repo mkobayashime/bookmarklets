@@ -101,10 +101,10 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
-"@mkobayashime/bookmarklets-cli@^0.1.1":
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@mkobayashime/bookmarklets-cli/-/bookmarklets-cli-0.1.1.tgz#2de1598f97af353c38d256773c55fa9e6cb0c7e9"
-  integrity sha512-pmeO4+fPwvUqQ5PCgJqX1Tl7bDfZGWrg/DPQT/ODmvkZf60eVN0sPo/aECnBjM3V6HeL4v0xwKmprYfszjFpzQ==
+"@mkobayashime/bookmarklets-cli@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@mkobayashime/bookmarklets-cli/-/bookmarklets-cli-0.2.0.tgz#c17f3eb728bb87121e16a0e0a30ee0dd19b7713c"
+  integrity sha512-9ASp9N2MSCe1qQMUVhlNFBfliOWUOuOdOWLpc1QMPCalKDyy5OAmQLcthhoYO1SabmEg0CyJLUnPqrXiKLKiJQ==
   dependencies:
     arg "^5.0.2"
     chalk "5.1.2"
