@@ -2,6 +2,9 @@ on: push
 
 name: CI
 
+env:
+  MAKE_YARN_FROZEN_LOCKFILE: 1
+
 jobs:
   lint:
     name: Lint
@@ -16,8 +19,6 @@ jobs:
         with:
           path: "**/node_modules"
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
-      - name: Install dependencies
-        run: yarn --frozen-lockfile
       - name: ESLint
         run: make lint
       - name: Prettier
@@ -37,8 +38,6 @@ jobs:
         with:
           path: "**/node_modules"
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
-      - name: Install dependencies
-        run: yarn --frozen-lockfile
       - name: Test
         run: make test
   up-to-date:
@@ -54,8 +53,6 @@ jobs:
         with:
           path: "**/node_modules"
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
-      - name: Install dependencies
-        run: yarn --frozen-lockfile
       - name: Build
         run: make build
       - name: Check uncommitted changes
