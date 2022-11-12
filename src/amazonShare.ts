@@ -9,11 +9,23 @@ import { copyToClipboard } from "./utils/copyToClipboard"
 ;(async () => {
   if (!window.location.href.startsWith("https://www.amazon.co.jp")) return
 
+  const canonicalLinkElement = document.querySelector<HTMLLinkElement>(
+    'link[rel="canonical"]'
+  )
+  if (!canonicalLinkElement) {
+    window.alert("Failed to get normalized URL")
+    return
+  }
+
+  const canonicalURL = new URL(canonicalLinkElement.href)
+  canonicalURL.search = ""
+  canonicalURL.hash = ""
+
   const itemIDMatch = new RegExp(
-    "^https://www.amazon.co.jp/[^/]+/dp/([^/]+)/"
-  ).exec(window.location.href)
+    "^https://www.amazon.co.jp/[^/]+/dp/([^/]+)"
+  ).exec(canonicalURL.toString())
   if (!itemIDMatch || typeof itemIDMatch[1] !== "string") {
-    console.error("Failed to retrieve ID of the item from URL")
+    window.alert("Failed to retrieve ID of the item from canonical URL")
     return
   }
 
@@ -22,7 +34,7 @@ import { copyToClipboard } from "./utils/copyToClipboard"
 
   const productTitleElement = document.getElementById("productTitle")
   if (!productTitleElement || productTitleElement.innerText === "") {
-    console.error("Failed to get name of the item")
+    window.alert("Failed to get name of the item")
     return
   }
 
