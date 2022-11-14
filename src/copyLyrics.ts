@@ -48,7 +48,7 @@ const jLyric = () => {
   if (url.startsWith("https://www.google.com/search")) {
     const lyrics = googleSearch()
     if (lyrics) {
-      await copyToClipboard(lyrics)
+      await copyToClipboard(lyrics, false)
     }
   }
 
@@ -62,7 +62,7 @@ const jLyric = () => {
   if (url.startsWith("https://j-lyric.net/")) {
     const lyrics = jLyric()
     if (lyrics) {
-      await copyToClipboard(lyrics)
+      await copyToClipboard(lyrics, false)
     }
   }
 })().catch((err) => console.error(err))

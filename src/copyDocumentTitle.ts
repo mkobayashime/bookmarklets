@@ -9,5 +9,5 @@ const titleElement = document.querySelector("title")
 const title = titleElement?.innerText
 
 ;(async () => {
-  if (title) await copyToClipboard(title)
+  if (title) await copyToClipboard(title, false)
 })().catch((err) => console.error(err))
