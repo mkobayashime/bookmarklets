@@ -40,7 +40,7 @@ import { copyToClipboard } from "./utils/copyToClipboard"
 
   const sharableText = `${productTitleElement.innerText}\n${normalizedURL}`
 
-  await copyToClipboard(sharableText, false)
+  await copyToClipboard(sharableText)
 })().catch((err) => {
   console.error(err)
 })
