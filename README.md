@@ -40,6 +40,10 @@ Limit max width of body to 1000px and center it
 
 Change playback speed of video elements to inputted value
 
+### [YouTube - Clear timestamp in URL](https://raw.githubusercontent.com/mkobayashime/bookmarklets/main/dist/youtubeClearTimestampQuery.js)
+
+Clear `t` query parameter representing timestamp
+
 ### [YouTube - Exit from playlist](https://raw.githubusercontent.com/mkobayashime/bookmarklets/main/dist/youtubeExitPlaylist.js)
 
 Exit from playlist and play current video alone
