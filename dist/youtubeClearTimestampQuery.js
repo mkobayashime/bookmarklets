@@ -1,0 +1,1 @@
+javascript:(()=>{var%20e%3Dnew%20URL(window.location.href)%3Be.searchParams.delete(%22t%22)%2Cwindow.history.pushState(%7B%7D%2C%22%22%2Ce)%3B})()
