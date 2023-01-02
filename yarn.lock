@@ -201,7 +201,7 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
-"@mkobayashime/bookmarklets-cli@^0.3.0":
+"@mkobayashime/bookmarklets-cli@0.3.0":
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/@mkobayashime/bookmarklets-cli/-/bookmarklets-cli-0.3.0.tgz#f64c1e66b2493c09b4f67f826ad0b0887536e33e"
   integrity sha512-vESAo+AUrvvxMVthASwzNsMpPWcnmzWrf6FTn85nHKgJcKIX+lYIfJqpRag+DNqduG/rdrSgWjmwvc9h0JN7gg==
