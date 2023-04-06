@@ -41,6 +41,14 @@ const jLyric = () => {
   return wrapper.innerText
 }
 
+const lineMusic = () => {
+  const wrapper = document.querySelector(".ly_text")
+  if (!wrapper || !(wrapper instanceof HTMLElement)) return
+
+  const text = wrapper.innerText
+  return text.replace(/歌詞\s*/, "")
+}
+
 //
 ;(async () => {
   const url = window.location.href
@@ -61,6 +69,13 @@ const jLyric = () => {
 
   if (url.startsWith("https://j-lyric.net/")) {
     const lyrics = jLyric()
+    if (lyrics) {
+      await copyToClipboard(lyrics, false)
+    }
+  }
+
+  if (url.startsWith("https://music.line.me/webapp/")) {
+    const lyrics = lineMusic()
     if (lyrics) {
       await copyToClipboard(lyrics, false)
     }
