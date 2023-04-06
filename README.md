@@ -16,10 +16,6 @@ Copy name and normalized link of the current item to clipboard
 
 Copy the value of `<title>` element to clipboard
 
-### [Copy lyrics](https://raw.githubusercontent.com/mkobayashime/bookmarklets/main/dist/copyLyrics.js)
-
-Automatically Copy lyrics to clipboard in supported sites
-
 ### [Enable selection](https://raw.githubusercontent.com/mkobayashime/bookmarklets/main/dist/enableSelection.js)
 
 Enable text selection with mouse cursor in pages which prohibit doing that
