@@ -36,6 +36,10 @@ Limit max width of body to 1000px and center it
 
 Change playback speed of video elements to inputted value
 
+### [Twitter - Search from the user](https://raw.githubusercontent.com/mkobayashime/bookmarklets/main/dist/twitterSearchFromAccount.js)
+
+Search tweets from the user shown in the page with the provided query
+
 ### [YouTube - Clear timestamp in URL](https://raw.githubusercontent.com/mkobayashime/bookmarklets/main/dist/youtubeClearTimestampQuery.js)
 
 Clear `t` query parameter representing timestamp
