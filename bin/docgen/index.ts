@@ -2,7 +2,7 @@ import * as A from "fp-ts/lib/Array.js"
 import { pipe } from "fp-ts/lib/function.js"
 import * as Ord from "fp-ts/lib/Ord.js"
 import * as string from "fp-ts/lib/string.js"
-import glob from "glob"
+import { globSync } from "glob"
 import path from "path"
 
 import { FileProperties } from "../../types"
@@ -12,7 +12,7 @@ import { generateMdFileEntry, updateReadme } from "./readmeMarkdown.js"
 
 const getFiles = (): string[] => {
   try {
-    return glob.sync(path.resolve("src", "*.ts"))
+    return globSync(path.resolve("src", "*.ts"))
   } catch (err) {
     console.error(err)
     return []
