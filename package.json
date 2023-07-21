@@ -13,7 +13,7 @@
     "@mkobayashime/eslint-config-typescript": "0.1.2",
     "@swc/core": "1.3.70",
     "@types/glob": "8.1.0",
-    "@types/node": "18.11.18",
+    "@types/node": "18.16.19",
     "@typescript-eslint/eslint-plugin": "5.62.0",
     "@typescript-eslint/parser": "5.62.0",
     "ava": "5.1.0",
