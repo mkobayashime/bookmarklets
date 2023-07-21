@@ -30,7 +30,7 @@ Limit max width of body to 1000px and center it
 
 ### [Mobile Suica - Sum checked payments](https://raw.githubusercontent.com/mkobayashime/bookmarklets/main/dist/mobileSuicaSum.js)
 
-モバイル Suica の利用履歴ページでチェックの入っている支払いの合計額を計算します
+モバイルSuicaの利用履歴ページでチェックの入っている支払いの合計額を計算します
 
 ### [Playback speed](https://raw.githubusercontent.com/mkobayashime/bookmarklets/main/dist/playbackRate.js)
 
@@ -58,4 +58,4 @@ Reopen currently playing music as video in normal YouTube
 
 ### [調整さん I'm free](https://raw.githubusercontent.com/mkobayashime/bookmarklets/main/dist/chouseisanImFree.js)
 
-調整さんの全日程候補で ○ を選択します
+調整さんの全日程候補で○を選択します
