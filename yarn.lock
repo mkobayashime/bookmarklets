@@ -253,10 +253,10 @@
     glob "8.1.0"
     terser "5.19.1"
 
-"@mkobayashime/eslint-config-typescript@0.1.2":
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/@mkobayashime/eslint-config-typescript/-/eslint-config-typescript-0.1.2.tgz#24fba6429a63cc1a3a0edeb95f76645e67d25c9d"
-  integrity sha512-+Cq1Mn7I0OunB52TOu98gY/SjhZfE5Yc9GYtqXeUZ8V6i8KzvD4Yh7b08OcDUccS+RYNV+qCVls9UdcRdUhsrA==
+"@mkobayashime/eslint-config-typescript@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@mkobayashime/eslint-config-typescript/-/eslint-config-typescript-1.0.0.tgz#64fc88044187deea7ee7e853fd6b1c6c9e4335cc"
+  integrity sha512-PFT+orVt5xDwVW1k580/MT/UyB1rPXLHCulBd7+14x7WsGM3IweOd/fxaAY/t9iVJMk3Zqr1aJwi9M+yrkmIoQ==
 
 "@mkobayashime/eslint-config@0.2.1":
   version "0.2.1"
