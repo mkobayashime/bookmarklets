@@ -258,10 +258,10 @@
   resolved "https://registry.yarnpkg.com/@mkobayashime/eslint-config-typescript/-/eslint-config-typescript-1.0.0.tgz#64fc88044187deea7ee7e853fd6b1c6c9e4335cc"
   integrity sha512-PFT+orVt5xDwVW1k580/MT/UyB1rPXLHCulBd7+14x7WsGM3IweOd/fxaAY/t9iVJMk3Zqr1aJwi9M+yrkmIoQ==
 
-"@mkobayashime/eslint-config@0.2.1":
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/@mkobayashime/eslint-config/-/eslint-config-0.2.1.tgz#1472a9ed41cc0e270489bc4d98febeca4a6780b6"
-  integrity sha512-dnZyV8mq7Rt4o1SeH8eHpxDJG80TaJU+apjfgIP46oQUtMUutK2/+ablRnYp3mtbf7gzQxkwrIrTpqyumxA0pw==
+"@mkobayashime/eslint-config@0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@mkobayashime/eslint-config/-/eslint-config-0.3.0.tgz#1bbb7c1de658aff5b2177251d6d7d25835ebbf67"
+  integrity sha512-cmESjmB5W//ILQvtOhurTkMj2zjVKFugEZHsIGivWh9a+PcV/7MYBCfKp9uyeDxZ3/PIItagvMI7xP+hr4l2kg==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
