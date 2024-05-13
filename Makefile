@@ -1,4 +1,5 @@
 cli = yarn run bookmarklets-cli 'src/*.ts'
+jest = NODE_OPTIONS='--experimental-vm-modules' yarn run jest
 
 node_modules: package.json yarn.lock
 ifeq ($(MAKE_YARN_FROZEN_LOCKFILE), 1)
@@ -26,11 +27,11 @@ format.check: node_modules
 
 .PHONY: test
 test: node_modules
-	yarn run ava
+	$(jest)
 
 .PHONY: test.watch
 test.watch: node_modules
-	yarn run ava --watch
+	$(jest) --watch
 
 .PHONY: clear
 clear:
