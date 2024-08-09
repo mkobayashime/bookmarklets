@@ -11,7 +11,7 @@
     "@mkobayashime/bookmarklets-cli": "0.3.3",
     "@mkobayashime/eslint-config": "0.3.0",
     "@mkobayashime/eslint-config-typescript": "1.0.0",
-    "@swc/core": "1.3.70",
+    "@swc/core": "1.7.10",
     "@swc/jest": "^0.2.36",
     "@types/glob": "8.1.0",
     "@types/jest": "^29.5.12",
