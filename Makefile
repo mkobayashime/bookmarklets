@@ -39,7 +39,7 @@ clear:
 
 .PHONY: dev
 dev: node_modules
-	$(cli) -w
+	$(cli) --watch
 
 .PHONY: build
 build: node_modules clear
