@@ -15,10 +15,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "lts/*"
-      - uses: actions/cache@v3
-        with:
-          path: "**/node_modules"
-          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+          cache: "yarn"
       - name: ESLint
         run: make lint
       - name: Prettier
@@ -34,10 +31,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "lts/*"
-      - uses: actions/cache@v3
-        with:
-          path: "**/node_modules"
-          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+          cache: "yarn"
       - name: Test
         run: make test
   up-to-date:
@@ -49,10 +43,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "lts/*"
-      - uses: actions/cache@v3
-        with:
-          path: "**/node_modules"
-          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+          cache: "yarn"
       - name: Build
         run: make build
       - name: Check uncommitted changes
