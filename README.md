@@ -32,6 +32,10 @@ Limit max width of body to 1000px and center it
 
 モバイルSuicaの利用履歴ページでチェックの入っている支払いの合計額を計算します
 
+### [Open Parcel Tracking URL](https://raw.githubusercontent.com/mkobayashime/bookmarklets/main/dist/parcelTrackingURL.js)
+
+入力された問い合わせ番号の荷物の追跡ページを開きます 対応配送会社: クロネコヤマト/佐川急便/日本郵便
+
 ### [Playback speed](https://raw.githubusercontent.com/mkobayashime/bookmarklets/main/dist/playbackRate.js)
 
 Change playback speed of video elements to inputted value
