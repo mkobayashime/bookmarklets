@@ -14,7 +14,7 @@
     "@swc/jest": "0.2.36",
     "@types/glob": "8.1.0",
     "@types/jest": "29.5.12",
-    "@types/node": "20.14.15",
+    "@types/node": "20.16.1",
     "@typescript-eslint/eslint-plugin": "6.21.0",
     "@typescript-eslint/parser": "6.21.0",
     "bookmarklets-cli": "1.0.1",
