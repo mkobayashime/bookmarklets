@@ -12,9 +12,7 @@
     "@mkobayashime/eslint-config-typescript": "1.0.0",
     "@swc-node/register": "1.10.9",
     "@swc/core": "1.7.18",
-    "@swc/jest": "0.2.36",
     "@types/glob": "8.1.0",
-    "@types/jest": "29.5.12",
     "@types/node": "20.16.1",
     "@typescript-eslint/eslint-plugin": "6.21.0",
     "@typescript-eslint/parser": "6.21.0",
@@ -26,10 +24,9 @@
     "eslint-plugin-import": "2.30.0",
     "fp-ts": "2.16.9",
     "glob": "11.0.0",
-    "jest": "29.7.0",
     "prettier": "3.3.3",
-    "ts-jest-resolver": "2.0.1",
-    "typescript": "5.5.4"
+    "typescript": "5.5.4",
+    "vitest": "2.0.5"
   },
   "resolutions": {
     "wrap-ansi": "7.0.0",
