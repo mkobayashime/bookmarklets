@@ -9,52 +9,42 @@ else
 endif
 	@touch node_modules
 
-.PHONY: lint
-lint: node_modules
+lint: node_modules PHONY
 	yarn eslint .
 
-.PHONY: lint.fix
-lint.fix: node_modules
+lint.fix: node_modules PHONY
 	yarn eslint --fix .
 
-.PHONY: format
-format: node_modules
+format: node_modules PHONY
 	yarn prettier --write .
 
-.PHONY: format.check
-format.check: node_modules
+format.check: node_modules PHONY
 	yarn prettier --check .
 
-.PHONY: test
-test: node_modules
+test: node_modules PHONY
 	$(vitest) run
 
-.PHONY: test.watch
-test.watch: node_modules
+test.watch: node_modules PHONY
 	$(vitest) watch
 
-.PHONY: clear
-clear:
+clear: PHONY
 	rm -rf dist
 
-.PHONY: dev
-dev: node_modules
+dev: node_modules PHONY
 	$(cli) --watch
 
-.PHONY: build
-build: node_modules clear
+build: node_modules clear PHONY
 	$(cli)
 	@make docgen
 
-.PHONY: docgen
-docgen: node_modules
+docgen: node_modules PHONY
 	node --loader @swc-node/register/esm bin/docgen/index.ts
 	@make format
 
-.PHONY: typecheck
-typecheck: node_modules
+typecheck: node_modules PHONY
 	yarn tsc --noEmit
 
-.PHONY: typecheck.watch
-typecheck.watch: node_modules
+typecheck.watch: node_modules PHONY
 	yarn tsc --noEmit --watch
+
+PHONY:
