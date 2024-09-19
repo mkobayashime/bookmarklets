@@ -1,25 +1,23 @@
-cli = yarn run bookmarklets-cli 'src/*.ts'
-vitest = yarn run vitest
+cli = pnpm exec bookmarklets-cli 'src/*.ts'
+vitest = pnpm exec vitest
+eslint = pnpm exec eslint
+prettier = pnpm exec prettier
 
-node_modules: package.json yarn.lock
-ifeq ($(MAKE_YARN_FROZEN_LOCKFILE), 1)
-	yarn install --frozen-lockfile
-else
-	yarn install
-endif
+node_modules: package.json pnpm-*.yaml
+	pnpm install
 	@touch node_modules
 
 lint: node_modules PHONY
-	yarn eslint .
+	$(eslint) .
 
 lint.fix: node_modules PHONY
-	yarn eslint --fix .
+	$(eslint) --fix .
 
 format: node_modules PHONY
-	yarn prettier --write .
+	$(prettier) --write .
 
 format.check: node_modules PHONY
-	yarn prettier --check .
+	$(prettier) --check .
 
 test: node_modules PHONY
 	$(vitest) run
@@ -42,9 +40,9 @@ docgen: node_modules PHONY
 	@make format
 
 typecheck: node_modules PHONY
-	yarn tsc --noEmit
+	pnpm exec tsc --noEmit
 
 typecheck.watch: node_modules PHONY
-	yarn tsc --noEmit --watch
+	pnpm exec tsc --noEmit --watch
 
 PHONY:
