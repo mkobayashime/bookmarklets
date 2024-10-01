@@ -28,4 +28,4 @@ jobs:
           cache: "pnpm"
       - run: make build
       - name: Check uncommitted changes
-        run: test -z "$(git status --porcelain)"
+        run: git add --intent-to-add . && git diff --exit-code --stat
