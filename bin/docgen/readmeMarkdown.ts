@@ -1,5 +1,5 @@
-import path from "path";
-import { readFile, writeFile } from "fs/promises";
+import { readFile, writeFile } from "node:fs/promises";
+import path from "node:path";
 
 import type { FileProperties } from "../../types";
 
@@ -27,6 +27,6 @@ export const updateReadme = async (scriptsMarkdown: string): Promise<void> => {
     readme.indexOf("## Scripts") + "## Scripts".length,
   );
 
-  const updatedReadme = readmeCommonPart + "\n\n" + scriptsMarkdown;
+  const updatedReadme = `${readmeCommonPart}\n\n${scriptsMarkdown}`;
   await writeFile(path.resolve("README.md"), updatedReadme);
 };

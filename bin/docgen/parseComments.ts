@@ -1,7 +1,7 @@
-import path from "path";
+import { readFile } from "node:fs/promises";
+import path from "node:path";
 import { parse, tokenizers } from "comment-parser";
 import * as O from "fp-ts/lib/Option.js";
-import { readFile } from "fs/promises";
 
 import type { FileProperties } from "../../types";
 

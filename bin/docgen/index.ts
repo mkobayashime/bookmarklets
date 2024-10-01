@@ -1,4 +1,4 @@
-import path from "path";
+import path from "node:path";
 import * as A from "fp-ts/lib/Array.js";
 import * as Ord from "fp-ts/lib/Ord.js";
 import { pipe } from "fp-ts/lib/function.js";

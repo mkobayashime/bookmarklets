@@ -11,7 +11,9 @@
   if (!newPlaybackRateString) return;
 
   const newPlaybackRate = Number.parseFloat(newPlaybackRateString);
-  if (isNaN(newPlaybackRate)) return;
+  if (Number.isNaN(newPlaybackRate)) return;
 
-  videoElements.forEach((e) => (e.playbackRate = newPlaybackRate));
+  for (const e of videoElements) {
+    e.playbackRate = newPlaybackRate;
+  }
 })();

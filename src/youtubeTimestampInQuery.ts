@@ -9,7 +9,7 @@ if (video) {
 
   const location = window.location.href;
   const url = new URL(location);
-  url.searchParams.set("t", String(timestamp) + "s");
+  url.searchParams.set("t", `${String(timestamp)}s`);
   window.history.pushState({}, "", url);
 }
 

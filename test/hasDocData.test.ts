@@ -2,6 +2,7 @@ import fs from "node:fs/promises";
 import path, { basename } from "node:path";
 import * as O from "fp-ts/lib/Option.js";
 import { globSync } from "glob";
+import { expect, test } from "vitest";
 
 import { parseComments } from "../bin/docgen/parseComments.js";
 
