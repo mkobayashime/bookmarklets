@@ -5,6 +5,6 @@
  * which prohibit doing that
  */
 
-import { enableSelection } from "./utils/enableSelection"
+import { enableSelection } from "./utils/enableSelection";
 
-enableSelection()
+enableSelection();

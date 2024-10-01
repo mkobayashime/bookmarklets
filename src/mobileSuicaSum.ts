@@ -5,33 +5,33 @@
 
 const calc = () => {
   const rows = Array.from(document.querySelectorAll(".historyTable tr")).slice(
-    1
-  )
+    1,
+  );
 
   return rows.reduce((sum, curRow) => {
     const checkbox = curRow.querySelector<HTMLInputElement>(
-      "input[type='checkbox']"
-    )
-    if (!checkbox || !checkbox.checked) return sum
+      "input[type='checkbox']",
+    );
+    if (!checkbox || !checkbox.checked) return sum;
 
-    const amountElement = Array.from(curRow.children).pop()
-    if (!amountElement || !(amountElement instanceof HTMLElement)) return sum
+    const amountElement = Array.from(curRow.children).pop();
+    if (!amountElement || !(amountElement instanceof HTMLElement)) return sum;
 
-    if (!amountElement?.innerText) return sum
+    if (!amountElement?.innerText) return sum;
 
-    const amount = amountElement.innerText
-    if (!amount.startsWith("-")) return sum
+    const amount = amountElement.innerText;
+    if (!amount.startsWith("-")) return sum;
 
     const amountInNumber =
-      parseInt(amount.replace("-", "").replace(",", "")) || 0
-    return sum + amountInNumber
-  }, 0)
-}
+      Number.parseInt(amount.replace("-", "").replace(",", "")) || 0;
+    return sum + amountInNumber;
+  }, 0);
+};
 
 if (
   window.location.href.startsWith(
-    "https://www.mobilesuica.com/iq/ir/SuicaDisp.aspx"
+    "https://www.mobilesuica.com/iq/ir/SuicaDisp.aspx",
   )
 ) {
-  window.alert(`${calc()}円`)
+  window.alert(`${calc()}円`);
 }
