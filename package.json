@@ -18,11 +18,15 @@
     "comment-parser": "1.4.1",
     "fp-ts": "2.16.9",
     "glob": "11.0.0",
+    "lefthook": "1.7.18",
     "typescript": "5.5.4",
     "vitest": "2.0.5"
   },
   "resolutions": {
     "wrap-ansi": "7.0.0",
     "string-width": "4.2.3"
+  },
+  "scripts": {
+    "prepare": "lefthook install"
   }
 }
