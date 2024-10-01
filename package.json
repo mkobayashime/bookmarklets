@@ -10,8 +10,6 @@
   "type": "module",
   "devDependencies": {
     "@biomejs/biome": "1.9.2",
-    "@swc-node/register": "1.10.9",
-    "@swc/core": "1.7.26",
     "@types/glob": "8.1.0",
     "@types/node": "20.16.10",
     "bookmarklets-cli": "1.1.0",
@@ -19,6 +17,7 @@
     "fp-ts": "2.16.9",
     "glob": "11.0.0",
     "lefthook": "1.7.18",
+    "tsx": "4.19.1",
     "typescript": "5.5.4",
     "vitest": "2.0.5"
   },
