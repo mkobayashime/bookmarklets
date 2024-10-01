@@ -9,28 +9,24 @@
   "private": true,
   "type": "module",
   "devDependencies": {
-    "@mkobayashime/eslint-config": "0.3.0",
-    "@mkobayashime/eslint-config-typescript": "1.0.0",
+    "@biomejs/biome": "1.9.2",
     "@swc-node/register": "1.10.9",
     "@swc/core": "1.7.26",
     "@types/glob": "8.1.0",
     "@types/node": "20.16.10",
-    "@typescript-eslint/eslint-plugin": "6.21.0",
-    "@typescript-eslint/parser": "6.21.0",
     "bookmarklets-cli": "1.1.0",
     "comment-parser": "1.4.1",
-    "eslint": "8.57.1",
-    "eslint-config-prettier": "9.1.0",
-    "eslint-import-resolver-typescript": "3.6.3",
-    "eslint-plugin-import": "2.30.0",
     "fp-ts": "2.16.9",
     "glob": "11.0.0",
-    "prettier": "3.3.3",
+    "lefthook": "1.7.18",
     "typescript": "5.5.4",
     "vitest": "2.0.5"
   },
   "resolutions": {
     "wrap-ansi": "7.0.0",
     "string-width": "4.2.3"
+  },
+  "scripts": {
+    "prepare": "lefthook install"
   }
 }

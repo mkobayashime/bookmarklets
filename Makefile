@@ -1,23 +1,16 @@
 cli = pnpm exec bookmarklets-cli 'src/*.ts'
 vitest = pnpm exec vitest
-eslint = pnpm exec eslint
-prettier = pnpm exec prettier
+biome = pnpm exec biome
 
 node_modules: package.json pnpm-*.yaml
 	pnpm install
 	@touch node_modules
 
 lint: node_modules PHONY
-	$(eslint) .
+	$(biome) check .
 
 lint.fix: node_modules PHONY
-	$(eslint) --fix .
-
-format: node_modules PHONY
-	$(prettier) --write .
-
-format.check: node_modules PHONY
-	$(prettier) --check .
+	$(biome) check --fix .
 
 test: node_modules PHONY
 	$(vitest) run
@@ -37,7 +30,7 @@ build: node_modules clear PHONY
 
 docgen: node_modules PHONY
 	node --loader @swc-node/register/esm bin/docgen/index.ts
-	@make format
+	@make lint.fix
 
 typecheck: node_modules PHONY
 	pnpm exec tsc --noEmit

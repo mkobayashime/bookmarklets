@@ -3,8 +3,8 @@
  * @description Clear `t` query parameter representing timestamp
  */
 
-const url = new URL(window.location.href)
-url.searchParams.delete("t")
-window.history.pushState({}, "", url)
+const url = new URL(window.location.href);
+url.searchParams.delete("t");
+window.history.pushState({}, "", url);
 
-export {}
+export {};

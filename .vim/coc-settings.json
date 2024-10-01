@@ -1,0 +1,5 @@
+{
+  "prettier.formatterPriority": -1,
+  "eslint.enable": false,
+  "biome.requireConfiguration": true
+}

@@ -1,7 +1,7 @@
-import { readFile, writeFile } from "fs/promises"
-import path from "path"
+import { readFile, writeFile } from "node:fs/promises";
+import path from "node:path";
 
-import { FileProperties } from "../../types"
+import type { FileProperties } from "../../types";
 
 export const generateMdFileEntry = ({
   filename,
@@ -11,22 +11,22 @@ export const generateMdFileEntry = ({
   return `
 ### [${title}](https://raw.githubusercontent.com/mkobayashime/bookmarklets/main/dist/${filename.replace(
     /.ts$/,
-    ".js"
+    ".js",
   )})
 
 ${description ?? ""}
-  `.trim()
-}
+  `.trim();
+};
 
 export const updateReadme = async (scriptsMarkdown: string): Promise<void> => {
-  const readme = (await readFile(path.resolve(".", "README.md"))).toString()
-  if (!readme) return
+  const readme = (await readFile(path.resolve(".", "README.md"))).toString();
+  if (!readme) return;
 
   const readmeCommonPart = readme.slice(
     0,
-    readme.indexOf("## Scripts") + "## Scripts".length
-  )
+    readme.indexOf("## Scripts") + "## Scripts".length,
+  );
 
-  const updatedReadme = readmeCommonPart + "\n\n" + scriptsMarkdown
-  await writeFile(path.resolve("README.md"), updatedReadme)
-}
+  const updatedReadme = `${readmeCommonPart}\n\n${scriptsMarkdown}`;
+  await writeFile(path.resolve("README.md"), updatedReadme);
+};
