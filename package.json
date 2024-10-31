@@ -11,7 +11,7 @@
   "devDependencies": {
     "@biomejs/biome": "1.9.3",
     "@types/glob": "8.1.0",
-    "@types/node": "20.16.11",
+    "@types/node": "20.17.5",
     "bookmarklets-cli": "1.1.0",
     "comment-parser": "1.4.1",
     "fp-ts": "2.16.9",
