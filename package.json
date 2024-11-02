@@ -1,7 +1,7 @@
 {
   "name": "bookmarklets",
   "version": "1.0.0",
-  "packageManager": "pnpm@9.12.1",
+  "packageManager": "pnpm@9.12.3",
   "description": "My daily use bookmarklets",
   "main": "index.js",
   "author": "Masaki Kobayashi <contact@mkobayashi.me>",
@@ -9,17 +9,17 @@
   "private": true,
   "type": "module",
   "devDependencies": {
-    "@biomejs/biome": "1.9.3",
+    "@biomejs/biome": "1.9.4",
     "@types/glob": "8.1.0",
     "@types/node": "22.8.6",
     "bookmarklets-cli": "1.1.0",
     "comment-parser": "1.4.1",
     "fp-ts": "2.16.9",
     "glob": "11.0.0",
-    "lefthook": "1.8.0",
-    "tsx": "4.19.1",
+    "lefthook": "1.8.2",
+    "tsx": "4.19.2",
     "typescript": "5.6.3",
-    "vitest": "2.1.2"
+    "vitest": "2.1.4"
   },
   "scripts": {
     "prepare": "lefthook install"
