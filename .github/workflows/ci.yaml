@@ -8,11 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
-      - uses: actions/setup-node@v4
+      - uses: oven-sh/setup-bun@v2
         with:
-          node-version: "lts/*"
-          cache: "pnpm"
+          bun-version: latest
+      - run: make node_modules
       - run: make lint
       - run: make typecheck
       - run: make test
@@ -21,11 +20,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
-      - uses: actions/setup-node@v4
+      - uses: oven-sh/setup-bun@v2
         with:
-          node-version: "lts/*"
-          cache: "pnpm"
+          bun-version: latest
+      - run: make node_modules
       - run: make build
       - name: Check uncommitted changes
         run: git add --intent-to-add . && git diff --exit-code --stat
