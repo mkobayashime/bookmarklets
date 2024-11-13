@@ -1,11 +1,10 @@
-cli = pnpm exec bookmarklets-cli 'src/*.ts'
-vitest = pnpm exec vitest
-biome = pnpm exec biome
-tsx = pnpm exec tsx
+cli = bunx bookmarklets-cli 'src/*.ts'
+vitest = bunx vitest
+biome = bunx biome
+tsx = bunx tsx
 
-node_modules: package.json pnpm-*.yaml
-	pnpm install
-	@touch node_modules
+node_modules: PHONY
+	bun install
 
 lint: node_modules PHONY
 	$(biome) check .
@@ -34,9 +33,9 @@ docgen: node_modules PHONY
 	@make lint.fix
 
 typecheck: node_modules PHONY
-	pnpm exec tsc --noEmit
+	bunx tsc --noEmit
 
 typecheck.watch: node_modules PHONY
-	pnpm exec tsc --noEmit --watch
+	bunx tsc --noEmit --watch
 
 PHONY:

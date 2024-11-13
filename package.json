@@ -1,7 +1,6 @@
 {
   "name": "bookmarklets",
   "version": "1.0.0",
-  "packageManager": "pnpm@9.12.3",
   "description": "My daily use bookmarklets",
   "main": "index.js",
   "author": "Masaki Kobayashi <contact@mkobayashi.me>",
@@ -23,5 +22,6 @@
   },
   "scripts": {
     "prepare": "lefthook install"
-  }
+  },
+  "trustedDependencies": ["@biomejs/biome"]
 }
