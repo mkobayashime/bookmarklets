@@ -4,7 +4,11 @@
  */
 
 (() => {
-  if (!window.location.href.startsWith("https://twitter.com/")) return;
+  if (
+    !window.location.href.startsWith("https://twitter.com/") &&
+    !window.location.href.startsWith("https://x.com/")
+  )
+    return;
 
   const userName: string | undefined = window.location.pathname.split("/")[1];
   if (!userName) return;
