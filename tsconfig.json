@@ -1,14 +1,14 @@
 {
-  "include": ["**/*.ts", "**/*.js"],
-  "compilerOptions": {
-    "target": "es2020",
-    "module": "ESNext",
-    "lib": ["DOM", "ESNext"],
-    "moduleResolution": "node",
-    "noEmit": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "skipLibCheck": true
-  }
+	"include": ["**/*.ts", "**/*.js"],
+	"compilerOptions": {
+		"target": "es2020",
+		"module": "ESNext",
+		"lib": ["DOM", "ESNext"],
+		"moduleResolution": "node",
+		"noEmit": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"strict": true,
+		"skipLibCheck": true
+	}
 }
