@@ -1,29 +1,10 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
-  "vcs": {
-    "enabled": true,
-    "clientKind": "git",
-    "useIgnoreFile": true
-  },
-  "formatter": {
-    "enabled": true,
-    "indentStyle": "space",
-    "indentWidth": 2,
-    "ignore": ["dist"]
-  },
-  "organizeImports": {
-    "enabled": true
-  },
-  "linter": {
-    "enabled": true,
-    "rules": {
-      "recommended": true,
-      "correctness": {
-        "noUndeclaredVariables": "error",
-        "noUnusedImports": "error",
-        "noUnusedVariables": "error"
-      }
-    },
-    "ignore": ["dist"]
-  }
+	"$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
+	"extends": ["@mkobayashime/shared-config/biome"],
+	"formatter": {
+		"ignore": ["dist"]
+	},
+	"linter": {
+		"ignore": ["dist"]
+	}
 }

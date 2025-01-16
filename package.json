@@ -9,6 +9,7 @@
   "type": "module",
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
+    "@mkobayashime/shared-config": "1.0.0",
     "@types/glob": "8.1.0",
     "@types/node": "22.10.2",
     "bookmarklets-cli": "1.1.1",
