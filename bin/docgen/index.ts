@@ -11,31 +11,31 @@ import { parseComments } from "./parseComments.js";
 import { generateMdFileEntry, updateReadme } from "./readmeMarkdown.js";
 
 const getFiles = (): string[] => {
-  try {
-    return globSync(path.resolve("src", "*.ts"));
-  } catch (err) {
-    console.error(err);
-    return [];
-  }
+	try {
+		return globSync(path.resolve("src", "*.ts"));
+	} catch (err) {
+		console.error(err);
+		return [];
+	}
 };
 
 //
 (async () => {
-  const files = getFiles();
+	const files = getFiles();
 
-  const filesProperties = pipe(
-    await Promise.all(files.map(async (file) => await parseComments(file))),
-    A.compact,
-    A.sort<FileProperties>(
-      Ord.fromCompare((a, b) => string.Ord.compare(a.title, b.title)),
-    ),
-  );
+	const filesProperties = pipe(
+		await Promise.all(files.map(async (file) => await parseComments(file))),
+		A.compact,
+		A.sort<FileProperties>(
+			Ord.fromCompare((a, b) => string.Ord.compare(a.title, b.title)),
+		),
+	);
 
-  const scriptsMarkdown = filesProperties
-    .map((fileProperties) => generateMdFileEntry(fileProperties))
-    .join("\n\n");
+	const scriptsMarkdown = filesProperties
+		.map((fileProperties) => generateMdFileEntry(fileProperties))
+		.join("\n\n");
 
-  await updateReadme(scriptsMarkdown);
+	await updateReadme(scriptsMarkdown);
 })().catch((err) => {
-  throw err;
+	throw err;
 });

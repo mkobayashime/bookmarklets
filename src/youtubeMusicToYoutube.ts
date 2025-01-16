@@ -4,6 +4,6 @@
  */
 
 window.location.href = window.location.href.replace(
-  "//music.youtube.com/",
-  "//youtube.com/",
+	"//music.youtube.com/",
+	"//youtube.com/",
 );

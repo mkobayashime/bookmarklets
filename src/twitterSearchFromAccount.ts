@@ -4,19 +4,19 @@
  */
 
 (() => {
-  if (
-    !window.location.href.startsWith("https://twitter.com/") &&
-    !window.location.href.startsWith("https://x.com/")
-  )
-    return;
+	if (
+		!window.location.href.startsWith("https://twitter.com/") &&
+		!window.location.href.startsWith("https://x.com/")
+	)
+		return;
 
-  const userName: string | undefined = window.location.pathname.split("/")[1];
-  if (!userName) return;
+	const userName: string | undefined = window.location.pathname.split("/")[1];
+	if (!userName) return;
 
-  const query = window.prompt("Query?");
-  if (!query) return;
+	const query = window.prompt("Query?");
+	if (!query) return;
 
-  window.location.href = `https://twitter.com/search?q=${encodeURIComponent(
-    query,
-  )}%20from%3A${encodeURIComponent(userName)}&f=live`;
+	window.location.href = `https://twitter.com/search?q=${encodeURIComponent(
+		query,
+	)}%20from%3A${encodeURIComponent(userName)}&f=live`;
 })();
