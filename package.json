@@ -16,10 +16,10 @@
 		"comment-parser": "1.4.1",
 		"fp-ts": "2.16.9",
 		"glob": "11.0.1",
-		"lefthook": "1.10.7",
+		"lefthook": "1.10.8",
 		"tsx": "4.19.2",
 		"typescript": "5.7.3",
-		"vitest": "3.0.1"
+		"vitest": "3.0.2"
 	},
 	"scripts": {
 		"prepare": "lefthook install"
