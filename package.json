@@ -14,11 +14,13 @@
 		"@types/node": "22.10.7",
 		"bookmarklets-cli": "1.1.1",
 		"comment-parser": "1.4.1",
+		"eslint": "9.18.0",
 		"fp-ts": "2.16.9",
 		"glob": "11.0.1",
 		"lefthook": "1.10.7",
 		"tsx": "4.19.2",
 		"typescript": "5.7.3",
+		"typescript-eslint": "8.21.0",
 		"vitest": "3.0.1"
 	},
 	"scripts": {

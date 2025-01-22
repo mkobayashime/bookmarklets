@@ -1,6 +1,7 @@
 cli = bunx bookmarklets-cli 'src/*.ts'
 vitest = bunx vitest
 biome = bunx biome
+eslint = bunx eslint
 tsx = bunx tsx
 
 node_modules: PHONY
@@ -8,9 +9,11 @@ node_modules: PHONY
 
 lint: node_modules PHONY
 	$(biome) check .
+	$(eslint) .
 
 lint.fix: node_modules PHONY
 	$(biome) check --fix .
+	$(eslint) --fix .
 
 test: node_modules PHONY
 	$(vitest) run
