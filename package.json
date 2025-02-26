@@ -11,17 +11,17 @@
 		"@biomejs/biome": "1.9.4",
 		"@mkobayashime/shared-config": "1.1.0",
 		"@types/glob": "8.1.0",
-		"@types/node": "22.13.4",
+		"@types/node": "22.13.5",
 		"bookmarklets-cli": "1.1.1",
 		"comment-parser": "1.4.1",
 		"eslint": "9.20.1",
 		"fp-ts": "2.16.9",
 		"glob": "11.0.1",
 		"lefthook": "1.10.10",
-		"tsx": "4.19.2",
+		"tsx": "4.19.3",
 		"typescript": "5.7.3",
 		"typescript-eslint": "8.25.0",
-		"vitest": "3.0.6"
+		"vitest": "3.0.7"
 	},
 	"scripts": {
 		"prepare": "lefthook install"
