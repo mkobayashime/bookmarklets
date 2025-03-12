@@ -30,7 +30,7 @@ export const parseComments = async (
 		return O.some({
 			filename: path.basename(filepath),
 			title: titleSpec.description,
-			description: descriptionSpec?.description,
+			description: descriptionSpec?.description.replace(/\\n\s*/, "  \n"),
 		});
 	} catch (err) {
 		console.error(err);
