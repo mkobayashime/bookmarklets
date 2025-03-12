@@ -34,7 +34,8 @@ Limit max width of body to 1000px and center it
 
 ### [Open Parcel Tracking URL](https://raw.githubusercontent.com/mkobayashime/bookmarklets/main/dist/parcelTrackingURL.js)
 
-入力された問い合わせ番号の荷物の追跡ページを開きます 対応配送会社: クロネコヤマト/佐川急便/日本郵便
+入力された問い合わせ番号の荷物の追跡ページを開きます  
+対応配送会社: クロネコヤマト/佐川急便/日本郵便
 
 ### [Playback speed](https://raw.githubusercontent.com/mkobayashime/bookmarklets/main/dist/playbackRate.js)
 
