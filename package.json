@@ -15,7 +15,7 @@
 		"bookmarklets-cli": "1.1.4",
 		"comment-parser": "1.4.1",
 		"eslint": "9.25.0",
-		"fp-ts": "2.16.9",
+		"fp-ts": "2.16.10",
 		"glob": "11.0.1",
 		"lefthook": "1.11.10",
 		"tsx": "4.19.3",
