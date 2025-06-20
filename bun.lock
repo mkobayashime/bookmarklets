@@ -5,7 +5,7 @@
       "name": "bookmarklets",
       "devDependencies": {
         "@biomejs/biome": "1.9.4",
-        "@mkobayashime/shared-config": "1.1.1",
+        "@mkobayashime/shared-config": "1.2.0",
         "@types/glob": "8.1.0",
         "@types/node": "24.0.0",
         "bookmarklets-cli": "1.1.4",
@@ -133,7 +133,7 @@
 
     "@jridgewell/trace-mapping": ["@jridgewell/trace-mapping@0.3.25", "", { "dependencies": { "@jridgewell/resolve-uri": "^3.1.0", "@jridgewell/sourcemap-codec": "^1.4.14" } }, "sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ=="],
 
-    "@mkobayashime/shared-config": ["@mkobayashime/shared-config@1.1.1", "", { "peerDependencies": { "eslint": "^9.18.0", "typescript": "^5.0.0", "typescript-eslint": "^8.20.0" } }, "sha512-LnplddeUsNVvU7DegELDry/7Tf0z4oEoCAg7K9lnzjrpeBYVgyTBa0+O7D7yKti+LWtnPTAFZyqWa2kebavxhQ=="],
+    "@mkobayashime/shared-config": ["@mkobayashime/shared-config@1.2.0", "", { "peerDependencies": { "@biomejs/biome": "^1.9.4", "eslint": "^9.29.0", "typescript": "^5.8.3", "typescript-eslint": "^8.34.1" } }, "sha512-ky00w8xp+S3XcMGBNOytDVTmWhLt5nYmTXsS34QolmD/dPaZ9PHpBQt+i1YLz8GbB5cHD8t//UxQ5zKE45ZK4Q=="],
 
     "@nodelib/fs.scandir": ["@nodelib/fs.scandir@2.1.5", "", { "dependencies": { "@nodelib/fs.stat": "2.0.5", "run-parallel": "^1.1.9" } }, "sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g=="],
 
