@@ -17,7 +17,7 @@
 		"eslint": "9.30.1",
 		"fp-ts": "2.16.10",
 		"glob": "11.0.2",
-		"lefthook": "1.11.13",
+		"lefthook": "1.12.2",
 		"tsx": "4.20.0",
 		"typescript": "5.8.3",
 		"typescript-eslint": "8.35.0",
