@@ -8,7 +8,7 @@
 	"private": true,
 	"type": "module",
 	"devDependencies": {
-		"@biomejs/biome": "1.9.4",
+		"@biomejs/biome": "2.1.2",
 		"@mkobayashime/shared-config": "1.1.1",
 		"@types/glob": "8.1.0",
 		"@types/node": "24.0.0",
