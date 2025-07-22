@@ -22,5 +22,7 @@
 		"typescript-eslint": "8.35.0",
 		"vitest": "3.2.2"
 	},
-	"trustedDependencies": ["@biomejs/biome"]
+	"trustedDependencies": [
+		"@biomejs/biome"
+	]
 }
