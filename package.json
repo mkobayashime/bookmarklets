@@ -8,8 +8,8 @@
 	"private": true,
 	"type": "module",
 	"devDependencies": {
-		"@biomejs/biome": "1.9.4",
-		"@mkobayashime/shared-config": "1.1.1",
+		"@biomejs/biome": "2.1.2",
+		"@mkobayashime/shared-config": "2.0.0",
 		"@types/glob": "8.1.0",
 		"@types/node": "24.0.0",
 		"bookmarklets-cli": "1.1.4",
@@ -22,5 +22,7 @@
 		"typescript-eslint": "8.35.0",
 		"vitest": "3.2.2"
 	},
-	"trustedDependencies": ["@biomejs/biome"]
+	"trustedDependencies": [
+		"@biomejs/biome"
+	]
 }

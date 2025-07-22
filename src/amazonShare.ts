@@ -21,7 +21,7 @@ import { copyToClipboard } from "./utils/copyToClipboard";
 	canonicalURL.search = "";
 	canonicalURL.hash = "";
 
-	const itemIDMatch = /^https:\/\/www.amazon.co.jp\/[^\/]+\/dp\/([^\/]+)/.exec(
+	const itemIDMatch = /^https:\/\/www.amazon.co.jp\/[^/]+\/dp\/([^/]+)/.exec(
 		canonicalURL.toString(),
 	);
 	if (!itemIDMatch || typeof itemIDMatch[1] !== "string") {
