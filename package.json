@@ -17,14 +17,10 @@
 		"eslint": "9.31.0",
 		"fp-ts": "2.16.10",
 		"glob": "11.0.2",
-		"lefthook": "1.11.13",
 		"tsx": "4.20.0",
 		"typescript": "5.8.3",
 		"typescript-eslint": "8.35.0",
 		"vitest": "3.2.2"
-	},
-	"scripts": {
-		"prepare": "lefthook install"
 	},
 	"trustedDependencies": ["@biomejs/biome"]
 }
