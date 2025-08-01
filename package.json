@@ -18,7 +18,7 @@
 		"fp-ts": "2.16.10",
 		"glob": "11.0.2",
 		"tsx": "4.20.0",
-		"typescript": "5.8.3",
+		"typescript": "5.9.2",
 		"typescript-eslint": "8.38.0",
 		"vitest": "3.2.2"
 	},
