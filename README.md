@@ -61,6 +61,10 @@ Put current timestamp to the `t` query parameter
 
 Reopen currently playing music as video in normal YouTube
 
+### [入力中の値を全角に変換](https://raw.githubusercontent.com/mkobayashime/bookmarklets/main/dist/zenkaku.js)
+
+フォームなどで入力欄に入力中の値のうち、半角の数値などを全角に変換します
+
 ### [調整さん I'm free](https://raw.githubusercontent.com/mkobayashime/bookmarklets/main/dist/chouseisanImFree.js)
 
 調整さんの全日程候補で○を選択します
