@@ -1,0 +1,1 @@
+javascript:(()=>{var%20l%3De%3D%3Ee.replaceAll(%2F%5BA-Za-z0-9%5D%2Fg%2C(e%3D%3EString.fromCharCode(e.charCodeAt(0)%2B65248))).replaceAll(%22%20%22%2C%22%E3%80%80%22).replaceAll(%22-%22%2C%22%EF%BC%8D%22)%3B(()%3D%3E%7Blet%7BactiveElement%3Ae%7D%3Ddocument%3Be%20instanceof%20HTMLInputElement%26%26(e.value%3Dl(e.value))%7D)()%3B})()
