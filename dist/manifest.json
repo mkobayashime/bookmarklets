@@ -1,0 +1,66 @@
+[
+	{
+		"name": "Amazon.co.jp - Copy sharable description",
+		"location": "amazonShare.ts"
+	},
+	{
+		"name": "調整さん I'm free",
+		"location": "chouseisanImFree.ts"
+	},
+	{
+		"name": "Copy document title",
+		"location": "copyDocumentTitle.ts"
+	},
+	{
+		"name": "Enable selection",
+		"location": "enableSelection.ts"
+	},
+	{
+		"name": "Fixed page width",
+		"location": "fixedWidth.ts"
+	},
+	{
+		"name": "Google - Search in English",
+		"location": "googleSearchInEn.ts"
+	},
+	{
+		"name": "Google - Search in Japanese",
+		"location": "googleSearchInJp.ts"
+	},
+	{
+		"name": "Mobile Suica - Sum checked payments",
+		"location": "mobileSuicaSum.ts"
+	},
+	{
+		"name": "Open Parcel Tracking URL",
+		"location": "parcelTrackingURL.ts"
+	},
+	{
+		"name": "Playback speed",
+		"location": "playbackRate.ts"
+	},
+	{
+		"name": "Twitter - Search from the user",
+		"location": "twitterSearchFromAccount.ts"
+	},
+	{
+		"name": "YouTube - Clear timestamp in URL",
+		"location": "youtubeClearTimestampQuery.ts"
+	},
+	{
+		"name": "YouTube - Exit from playlist",
+		"location": "youtubeExitPlaylist.ts"
+	},
+	{
+		"name": "YouTube Music to YouTube",
+		"location": "youtubeMusicToYoutube.ts"
+	},
+	{
+		"name": "YouTube - Timestamp in URL",
+		"location": "youtubeTimestampInQuery.ts"
+	},
+	{
+		"name": "入力中の値を全角に変換",
+		"location": "zenkaku.ts"
+	}
+]
