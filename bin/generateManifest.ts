@@ -26,7 +26,7 @@ const generateManifest = async (): Promise<void> => {
 		if (O.isSome(result)) {
 			manifest.push({
 				name: result.value.title,
-				location: file,
+				location: file.replace(/\.ts$/, ".js"),
 			});
 		}
 	}

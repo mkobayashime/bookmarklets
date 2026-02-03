@@ -1,66 +1,66 @@
 [
 	{
 		"name": "Amazon.co.jp - Copy sharable description",
-		"location": "amazonShare.ts"
+		"location": "amazonShare.js"
 	},
 	{
 		"name": "調整さん I'm free",
-		"location": "chouseisanImFree.ts"
+		"location": "chouseisanImFree.js"
 	},
 	{
 		"name": "Copy document title",
-		"location": "copyDocumentTitle.ts"
+		"location": "copyDocumentTitle.js"
 	},
 	{
 		"name": "Enable selection",
-		"location": "enableSelection.ts"
+		"location": "enableSelection.js"
 	},
 	{
 		"name": "Fixed page width",
-		"location": "fixedWidth.ts"
+		"location": "fixedWidth.js"
 	},
 	{
 		"name": "Google - Search in English",
-		"location": "googleSearchInEn.ts"
+		"location": "googleSearchInEn.js"
 	},
 	{
 		"name": "Google - Search in Japanese",
-		"location": "googleSearchInJp.ts"
+		"location": "googleSearchInJp.js"
 	},
 	{
 		"name": "Mobile Suica - Sum checked payments",
-		"location": "mobileSuicaSum.ts"
+		"location": "mobileSuicaSum.js"
 	},
 	{
 		"name": "Open Parcel Tracking URL",
-		"location": "parcelTrackingURL.ts"
+		"location": "parcelTrackingURL.js"
 	},
 	{
 		"name": "Playback speed",
-		"location": "playbackRate.ts"
+		"location": "playbackRate.js"
 	},
 	{
 		"name": "Twitter - Search from the user",
-		"location": "twitterSearchFromAccount.ts"
+		"location": "twitterSearchFromAccount.js"
 	},
 	{
 		"name": "YouTube - Clear timestamp in URL",
-		"location": "youtubeClearTimestampQuery.ts"
+		"location": "youtubeClearTimestampQuery.js"
 	},
 	{
 		"name": "YouTube - Exit from playlist",
-		"location": "youtubeExitPlaylist.ts"
+		"location": "youtubeExitPlaylist.js"
 	},
 	{
 		"name": "YouTube Music to YouTube",
-		"location": "youtubeMusicToYoutube.ts"
+		"location": "youtubeMusicToYoutube.js"
 	},
 	{
 		"name": "YouTube - Timestamp in URL",
-		"location": "youtubeTimestampInQuery.ts"
+		"location": "youtubeTimestampInQuery.js"
 	},
 	{
 		"name": "入力中の値を全角に変換",
-		"location": "zenkaku.ts"
+		"location": "zenkaku.js"
 	}
 ]
