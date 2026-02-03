@@ -2,7 +2,6 @@ cli = bunx bookmarklets-cli 'src/*.ts'
 vitest = bunx vitest
 biome = bunx biome
 eslint = bunx eslint
-tsx = bunx tsx
 
 node_modules: PHONY
 ifeq ($(CI), true)
@@ -40,7 +39,7 @@ build.manifest: node_modules PHONY
 	bun run ./bin/generateManifest.ts
 
 docgen: node_modules PHONY
-	$(tsx) bin/docgen/index.ts
+	bun run bin/docgen/index.ts
 	@make lint.fix
 
 typecheck: node_modules PHONY
