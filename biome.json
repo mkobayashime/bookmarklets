@@ -2,6 +2,6 @@
 	"$schema": "https://biomejs.dev/schemas/2.1.2/schema.json",
 	"extends": ["@mkobayashime/shared-config/biome"],
 	"files": {
-		"includes": ["**", "!**/dist"]
+		"includes": ["**", "!**/dist/*.js"]
 	}
 }
