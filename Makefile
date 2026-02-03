@@ -33,7 +33,11 @@ dev: node_modules PHONY
 
 build: node_modules clear PHONY
 	$(cli)
+	@make build.manifest
 	@make docgen
+
+build.manifest: node_modules PHONY
+	bun run ./bin/generateManifest.ts
 
 docgen: node_modules PHONY
 	$(tsx) bin/docgen/index.ts
