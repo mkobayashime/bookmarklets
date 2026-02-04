@@ -15,6 +15,7 @@
 		"bookmarklets-cli": "1.1.5",
 		"comment-parser": "1.4.4",
 		"eslint": "9.39.2",
+		"eslint-config-flat-gitignore": "2.1.0",
 		"fp-ts": "2.16.11",
 		"glob": "11.0.3",
 		"typescript": "5.9.3",
