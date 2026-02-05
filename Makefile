@@ -36,7 +36,7 @@ build: node_modules clear PHONY
 	@make docgen
 
 build.manifest: node_modules PHONY
-	bun run ./bin/generateManifest.ts
+	bun run ./bin/generateManifest.ts ./src ./dist
 
 docgen: node_modules PHONY
 	bun run bin/docgen/index.ts
