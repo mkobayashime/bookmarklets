@@ -10,7 +10,7 @@ const bookmarklets = globSync(path.resolve("src", "*.ts"));
 
 for (const filepath of bookmarklets) {
 	test(`${basename(filepath)} has doc data or docgen-ignored`, async () => {
-		const comments = await parseComments(filepath);
+		const comments = await parseComments({ filepath });
 
 		const fileLines = (await fs.readFile(filepath)).toString().split("\n");
 		const isDocgenIgnored = fileLines.some((line) =>

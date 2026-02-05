@@ -24,7 +24,9 @@ const getFiles = (): string[] => {
 	const files = getFiles();
 
 	const filesProperties = pipe(
-		await Promise.all(files.map(async (file) => await parseComments(file))),
+		await Promise.all(
+			files.map(async (file) => await parseComments({ filepath: file })),
+		),
 		A.compact,
 		A.sort<FileProperties>(
 			Ord.fromCompare((a, b) => string.Ord.compare(a.title, b.title)),
