@@ -10,8 +10,10 @@ type ManifestJson = Array<{
 }>;
 
 const generateManifest = async (): Promise<void> => {
-	const srcDir = path.resolve(import.meta.dirname, "../src");
-	const distDir = path.resolve(import.meta.dirname, "../dist");
+	const [relativeSrcDir, relativeDistDir] = process.argv.slice(2);
+
+	const srcDir = path.resolve(process.cwd(), relativeSrcDir);
+	const distDir = path.resolve(process.cwd(), relativeDistDir);
 	const outputPath = path.join(distDir, "manifest.json");
 
 	const files = await readdir(srcDir);
