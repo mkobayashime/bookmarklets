@@ -21,7 +21,10 @@ const generateManifest = async (): Promise<void> => {
 
 	for (const file of tsFiles) {
 		const filepath = path.join(srcDir, file);
-		const result = await parseComments(filepath);
+		const result = await parseComments({
+			filepath,
+			preferTitleInternal: true,
+		});
 
 		if (O.isSome(result)) {
 			manifest.push({

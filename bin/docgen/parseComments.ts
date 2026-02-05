@@ -5,9 +5,13 @@ import * as O from "fp-ts/lib/Option.js";
 
 import type { FileProperties } from "../../types";
 
-export const parseComments = async (
-	filepath: string,
-): Promise<O.Option<FileProperties>> => {
+export const parseComments = async ({
+	filepath,
+	preferTitleInternal = false,
+}: {
+	filepath: string;
+	preferTitleInternal?: boolean;
+}): Promise<O.Option<FileProperties>> => {
 	try {
 		const file = await readFile(filepath);
 		const lines = file.toString();
@@ -23,13 +27,16 @@ export const parseComments = async (
 
 		const specs = blocks[0].tags;
 		const titleSpec = specs.find(({ tag }) => tag === "title");
+		const titleInternalSpec = specs.find(({ tag }) => tag === "titleInternal");
 		const descriptionSpec = specs.find(({ tag }) => tag === "description");
 
 		if (!titleSpec) return O.none;
 
 		return O.some({
 			filename: path.basename(filepath),
-			title: titleSpec.description,
+			title: preferTitleInternal
+				? (titleInternalSpec?.description ?? titleSpec.description)
+				: titleSpec.description,
 			description: descriptionSpec?.description.replace(/\\n\s*/, "  \n"),
 		});
 	} catch (err) {

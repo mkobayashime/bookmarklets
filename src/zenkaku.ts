@@ -1,5 +1,6 @@
 /**
- * @title 入力中の値を全角に変換 Convert input text from Hankaku to Zenkaku
+ * @title 入力中の値を全角に変換
+ * @titleInternal Convert input text from Hankaku to Zenkaku
  * @description フォームなどで入力欄に入力中の値のうち、半角の数値などを全角に変換します
  */
 
