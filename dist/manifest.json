@@ -60,7 +60,7 @@
 		"location": "youtubeTimestampInQuery.js"
 	},
 	{
-		"name": "入力中の値を全角に変換",
+		"name": "入力中の値を全角に変換 Convert input text from Hankaku to Zenkaku",
 		"location": "zenkaku.js"
 	}
 ]
