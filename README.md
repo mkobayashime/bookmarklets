@@ -14,7 +14,7 @@ Copy name and normalized link of the current item to clipboard
 
 ### [Copy document title](https://raw.githubusercontent.com/mkobayashime/bookmarklets/main/dist/copyDocumentTitle.js)
 
-Copy the value of `<title>` element to clipboard
+Copy title of the document to clipboard
 
 ### [Enable selection](https://raw.githubusercontent.com/mkobayashime/bookmarklets/main/dist/enableSelection.js)
 
