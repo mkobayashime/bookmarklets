@@ -19,7 +19,7 @@
 		"fp-ts": "2.16.11",
 		"glob": "11.0.3",
 		"typescript": "5.9.3",
-		"typescript-eslint": "8.51.0",
+		"typescript-eslint": "8.55.0",
 		"vitest": "4.0.17"
 	},
 	"trustedDependencies": [
