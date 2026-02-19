@@ -1,14 +1,14 @@
 import fs from "node:fs/promises";
 import path, { basename } from "node:path";
+import { Glob } from "bun";
 import * as O from "fp-ts/lib/Option.js";
-import { globSync } from "glob";
 import { expect, test } from "vitest";
 
 import { parseComments } from "../bin/docgen/parseComments.js";
 
-const bookmarklets = globSync(path.resolve("src", "*.ts"));
+const bookmarklets = new Glob(path.resolve("src", "*.ts")).scan();
 
-for (const filepath of bookmarklets) {
+for await (const filepath of bookmarklets) {
 	test(`${basename(filepath)} has doc data or docgen-ignored`, async () => {
 		const comments = await parseComments({ filepath });
 

@@ -1,18 +1,18 @@
 import path from "node:path";
+import { Glob } from "bun";
 import * as A from "fp-ts/lib/Array.js";
 import { pipe } from "fp-ts/lib/function.js";
 import * as Ord from "fp-ts/lib/Ord.js";
 import * as string from "fp-ts/lib/string.js";
-import { globSync } from "glob";
 
 import type { FileProperties } from "../../types";
 
 import { parseComments } from "./parseComments.js";
 import { generateMdFileEntry, updateReadme } from "./readmeMarkdown.js";
 
-const getFiles = (): string[] => {
+const getFiles = async (): Promise<string[]> => {
 	try {
-		return globSync(path.resolve("src", "*.ts"));
+		return await Array.fromAsync(new Glob(path.resolve("src", "*.ts")).scan());
 	} catch (err) {
 		console.error(err);
 		return [];
@@ -20,8 +20,8 @@ const getFiles = (): string[] => {
 };
 
 //
-(async () => {
-	const files = getFiles();
+void (async () => {
+	const files = await getFiles();
 
 	const filesProperties = pipe(
 		await Promise.all(

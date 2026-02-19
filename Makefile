@@ -1,7 +1,7 @@
-cli = bunx bookmarklets-cli 'src/*.ts'
-vitest = bunx vitest
-biome = bunx biome
-eslint = bunx eslint
+cli = bunx --bun bookmarklets-cli 'src/*.ts'
+vitest = bunx --bun vitest
+biome = bunx --bun biome
+eslint = bunx --bun eslint
 
 node_modules: PHONY
 ifeq ($(CI), true)
