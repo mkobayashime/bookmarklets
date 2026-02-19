@@ -6,7 +6,7 @@
       "name": "bookmarklets",
       "devDependencies": {
         "@biomejs/biome": "2.3.11",
-        "@mkobayashime/shared-config": "3.0.0",
+        "@mkobayashime/shared-config": "4.0.0",
         "@types/bun": "^1.3.9",
         "@types/node": "25.0.10",
         "bookmarklets-cli": "1.1.5",
@@ -134,7 +134,7 @@
 
     "@jridgewell/trace-mapping": ["@jridgewell/trace-mapping@0.3.25", "", { "dependencies": { "@jridgewell/resolve-uri": "^3.1.0", "@jridgewell/sourcemap-codec": "^1.4.14" } }, "sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ=="],
 
-    "@mkobayashime/shared-config": ["@mkobayashime/shared-config@3.0.0", "", { "peerDependencies": { "@biomejs/biome": "^2.0.4", "eslint": "^9.31.0", "eslint-config-flat-gitignore": "^2.1.0", "typescript": "^5.8.3", "typescript-eslint": "^8.39.0" } }, "sha512-/wJWswLezPKDBWcn8FWSsVLuaTgBac69D7KsfC1snNxHjL7l7bf14To54tNmXw46RzY7G+GgHVJyKDVnR0gKHg=="],
+    "@mkobayashime/shared-config": ["@mkobayashime/shared-config@4.0.0", "", { "optionalDependencies": { "@biomejs/biome": ">2.3.0", "eslint": "^9.31.0", "eslint-config-flat-gitignore": "^2.1.0", "typescript": "^5.8.3", "typescript-eslint": "^8.39.0" } }, "sha512-yLcjSwsHmBQT5NngXSByTF1sn0qxSsyWRqFoOthhzWwvaWZWXi7vMNKVKW4JVn1WElh1AZuXL0WPHryNM6OvrA=="],
 
     "@rollup/rollup-android-arm-eabi": ["@rollup/rollup-android-arm-eabi@4.54.0", "", { "os": "android", "cpu": "arm" }, "sha512-OywsdRHrFvCdvsewAInDKCNyR3laPA2mc9bRYJ6LBp5IyvF3fvXbbNR0bSzHlZVFtn6E0xw2oZlyjg4rKCVcng=="],
 
