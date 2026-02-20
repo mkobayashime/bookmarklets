@@ -1,7 +1,6 @@
 import fs from "node:fs/promises";
 import path, { basename } from "node:path";
 import { Glob } from "bun";
-import * as O from "fp-ts/lib/Option.js";
 import { expect, test } from "vitest";
 
 import { parseComments } from "../bin/docgen/parseComments.js";
@@ -17,6 +16,6 @@ for await (const filepath of bookmarklets) {
 			line.includes("// docgen-ignore"),
 		);
 
-		expect(O.isSome(comments) || isDocgenIgnored).toBeTruthy();
+		expect(comments || isDocgenIgnored).toBeTruthy();
 	});
 }
