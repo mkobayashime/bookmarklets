@@ -1,6 +1,5 @@
 import { readdir, writeFile } from "node:fs/promises";
 import path from "node:path";
-import * as O from "fp-ts/lib/Option.js";
 
 import { parseComments } from "./docgen/parseComments.js";
 
@@ -28,9 +27,9 @@ const generateManifest = async (): Promise<void> => {
 			preferTitleInternal: true,
 		});
 
-		if (O.isSome(result)) {
+		if (result) {
 			manifest.push({
-				name: result.value.title,
+				name: result.title,
 				location: file.replace(/\.ts$/, ".js"),
 			});
 		}
