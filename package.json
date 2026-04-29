@@ -15,7 +15,7 @@
 		"bookmarklets-cli": "1.1.6",
 		"comment-parser": "1.4.5",
 		"eslint": "10.0.3",
-		"eslint-config-flat-gitignore": "2.2.1",
+		"eslint-config-flat-gitignore": "2.3.0",
 		"typescript": "5.9.3",
 		"typescript-eslint": "8.58.2",
 		"vitest": "4.1.0"
