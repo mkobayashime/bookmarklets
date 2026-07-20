@@ -7,8 +7,8 @@ jobs:
     name: Lint
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v7
-      - uses: oven-sh/setup-bun@v2
+      - uses: actions/checkout@v7.0.1
+      - uses: oven-sh/setup-bun@v2.2.0
         with:
           bun-version: latest
       - run: make node_modules
@@ -19,8 +19,8 @@ jobs:
     name: Up-to-date dist/docs
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v7
-      - uses: oven-sh/setup-bun@v2
+      - uses: actions/checkout@v7.0.1
+      - uses: oven-sh/setup-bun@v2.2.0
         with:
           bun-version: latest
       - run: make node_modules
