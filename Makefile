@@ -37,6 +37,7 @@ build: node_modules clear PHONY
 
 build.manifest: node_modules PHONY
 	bun run ./bin/generateManifest.ts ./src ./dist
+	$(oxfmt) ./dist/manifest.json
 
 docgen: node_modules PHONY
 	bun run bin/docgen/index.ts
