@@ -64,7 +64,7 @@ const getURL = (site: Site): string | undefined => {
 	}
 };
 
-void (() => {
+(() => {
 	const site = detectSite();
 	if (!site) return;
 

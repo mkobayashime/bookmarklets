@@ -1,4 +1,5 @@
 import path from "node:path";
+
 import { Glob } from "bun";
 
 import { parseComments } from "./parseComments.js";
@@ -18,9 +19,7 @@ void (async () => {
 	const files = await getFiles();
 
 	const filesProperties = (
-		await Promise.all(
-			files.map(async (file) => await parseComments({ filepath: file })),
-		)
+		await Promise.all(files.map(async (file) => await parseComments({ filepath: file })))
 	)
 		.flatMap((f) => (f === null ? [] : [f]))
 		.sort((a, b) => a.title.localeCompare(b.title));
