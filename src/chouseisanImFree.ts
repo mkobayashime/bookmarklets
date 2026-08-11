@@ -9,9 +9,7 @@
 		if (formOpenButton) formOpenButton.click();
 
 		const choiceInputs = Array.from(
-			document.querySelectorAll<HTMLInputElement>(
-				"#choice td input[type='hidden']",
-			),
+			document.querySelectorAll<HTMLInputElement>("#choice td input[type='hidden']"),
 		);
 		if (choiceInputs.length === 0) return;
 		for (const input of choiceInputs) {

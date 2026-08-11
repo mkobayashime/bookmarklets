@@ -1,26 +1,21 @@
 {
 	"name": "bookmarklets",
 	"version": "1.0.0",
-	"description": "My daily use bookmarklets",
-	"main": "index.js",
-	"author": "Masaki Kobayashi <contact@mkobayashi.me>",
-	"license": "MIT",
 	"private": true,
+	"description": "My daily use bookmarklets",
+	"license": "MIT",
+	"author": "Masaki Kobayashi <contact@mkobayashi.me>",
 	"type": "module",
+	"main": "index.js",
 	"devDependencies": {
-		"@biomejs/biome": "2.5.3",
-		"@mkobayashime/shared-config": "4.1.0",
 		"@types/bun": "1.3.14",
 		"@types/node": "26.1.1",
 		"bookmarklets-cli": "1.1.6",
 		"comment-parser": "1.4.7",
-		"eslint": "10.7.0",
-		"eslint-config-flat-gitignore": "2.3.0",
+		"oxfmt": "0.63.0",
+		"oxlint": "1.78.0",
+		"oxlint-tsgolint": "7.0.2001",
 		"typescript": "5.9.3",
-		"typescript-eslint": "8.66.0",
 		"vitest": "4.1.10"
-	},
-	"trustedDependencies": [
-		"@biomejs/biome"
-	]
+	}
 }

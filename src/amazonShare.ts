@@ -9,9 +9,7 @@ import { copyToClipboard } from "./utils/copyToClipboard";
 (async () => {
 	if (!window.location.href.startsWith("https://www.amazon.co.jp")) return;
 
-	const canonicalLinkElement = document.querySelector<HTMLLinkElement>(
-		'link[rel="canonical"]',
-	);
+	const canonicalLinkElement = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
 	if (!canonicalLinkElement) {
 		window.alert("Failed to get normalized URL");
 		return;

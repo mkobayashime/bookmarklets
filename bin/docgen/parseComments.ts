@@ -1,5 +1,6 @@
 import { readFile } from "node:fs/promises";
 import path from "node:path";
+
 import { parse, tokenizers } from "comment-parser";
 
 import type { FileProperties } from "../../types";
@@ -14,10 +15,7 @@ export const parseComments = async ({
 	try {
 		const file = await readFile(filepath);
 		const lines = file.toString();
-		const commentString = lines.slice(
-			lines.indexOf("/**"),
-			lines.indexOf("*/") + 2,
-		);
+		const commentString = lines.slice(lines.indexOf("/**"), lines.indexOf("*/") + 2);
 
 		const blocks = parse(commentString, {
 			tokenizers: [tokenizers.tag(), tokenizers.description("compact")],

@@ -1,5 +1,6 @@
 import fs from "node:fs/promises";
 import path, { basename } from "node:path";
+
 import { Glob } from "bun";
 import { expect, test } from "vitest";
 
@@ -12,9 +13,7 @@ for await (const filepath of bookmarklets) {
 		const comments = await parseComments({ filepath });
 
 		const fileLines = (await fs.readFile(filepath)).toString().split("\n");
-		const isDocgenIgnored = fileLines.some((line) =>
-			line.includes("// docgen-ignore"),
-		);
+		const isDocgenIgnored = fileLines.some((line) => line.includes("// docgen-ignore"));
 
 		expect(comments || isDocgenIgnored).toBeTruthy();
 	});

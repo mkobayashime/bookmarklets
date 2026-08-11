@@ -6,13 +6,11 @@
 
 const toZenkaku = (str: string) =>
 	str
-		.replaceAll(/[A-Za-z0-9]/g, (s: string) =>
-			String.fromCharCode(s.charCodeAt(0) + 0xfee0),
-		)
+		.replaceAll(/[A-Za-z0-9]/g, (s: string) => String.fromCharCode(s.charCodeAt(0) + 0xfee0))
 		.replaceAll(" ", "　")
 		.replaceAll("-", "－");
 
-void (() => {
+(() => {
 	const { activeElement } = document;
 
 	if (!(activeElement instanceof HTMLInputElement)) return;
