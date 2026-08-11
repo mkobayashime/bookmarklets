@@ -1,7 +1,7 @@
 cli = bunx --bun bookmarklets-cli 'src/*.ts'
 vitest = bunx --bun vitest
-biome = bunx --bun biome
-eslint = bunx --bun eslint
+oxlint = bunx oxlint
+oxfmt = bunx oxfmt
 
 node_modules: PHONY
 ifeq ($(CI), true)
@@ -11,12 +11,12 @@ else
 endif
 
 lint: node_modules PHONY
-	$(biome) check .
-	$(eslint) .
+	$(oxfmt) --check
+	$(oxlint) --type-aware
 
 lint.fix: node_modules PHONY
-	$(biome) check --fix .
-	$(eslint) --fix .
+	$(oxfmt)
+	$(oxlint) --fix --type-aware
 
 test: node_modules PHONY
 	$(vitest) run
