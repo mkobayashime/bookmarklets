@@ -13,7 +13,7 @@
 		"bookmarklets-cli": "1.1.6",
 		"comment-parser": "1.4.7",
 		"oxfmt": "0.64.0",
-		"oxlint": "1.79.0",
+		"oxlint": "1.80.0",
 		"oxlint-tsgolint": "7.0.2001",
 		"typescript": "5.9.3",
 		"vitest": "4.1.10"
